@@ -1479,7 +1479,19 @@ Shopify.SignInWithShop.User.recognized = false;</script>
 </script>
 
 
-</head>
+<style id="alfa-no-drawer-spinner">
+/* Skrij cart-drawer / sidecart / spinner — ker ATC redirecta na checkout */
+.cart-drawer, .cart-drawer__overlay, .drawer.cart-drawer, [class*="cart-drawer"],
+.loading-overlay, .loading__spinner, .cart__overlay, .cart-notification,
+.cart-notification-wrapper, [class*="loading-overlay"], .drawer__overlay,
+.cart-drawer--active, .js-drawer-open, .overlay-cart {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+body.drawer-open, body.js-drawer-open, body.overflow-hidden { overflow: auto !important; }
+</style></head>
 
   <body
     class="gradient link-btns--arrow action-btns--center"
