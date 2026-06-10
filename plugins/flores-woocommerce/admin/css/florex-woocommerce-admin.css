@@ -1,0 +1,80 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+ .standalone_admin_grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    max-width: 1500px;
+ }
+ .standalone_admin_grid > div {
+    padding: 0 25px;
+ }
+ .standalone_admin_grid .standalone-utm-preview {
+    padding: 10px;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #aaa;
+ }
+ .standalone_admin_grid .standalone-utm-preview span {
+    color: #000;
+    font-weight: 500;
+ }
+
+ .digit-journey {
+    width: 100%;
+    text-align: left;
+ }
+
+ .digit-journey .journey-row th {
+    width: 250px;
+ }
+ .digit-journey .journey-badge {
+   display: inline-block;
+   margin-right: 10px;
+   font-family: 14px;
+   background-color: #256FEC;
+   color: #fff;
+   padding: 3px;
+   border-radius: 4px;
+ }
+ .flx-error {
+   color: red;
+   font-weight: bold;
+ }
+ .flx-success {
+   color: #00cd00;
+   font-weight: bold;
+ }
+ .florex-wrapper .nav-tab-wrapper {
+   background-color: #256fec;
+   padding-top: 0 !important;
+ }
+ .florex-wrapper .nav-tab-wrapper > a {
+   margin: 0 !important;
+   border: none;
+   background-color: unset;
+   padding: 10px 15px;
+   color: white;
+ }
+ .florex-wrapper .nav-tab-wrapper > a:hover {
+   background-color: #1c5ed0;
+ }
+ .florex-wrapper .nav-tab-wrapper > a.nav-tab-active {
+   background-color: white !important;
+   color: #333 !important;
+ }
+ .florex-wrapper .florex-logo {
+   display: block;
+   background-color: #256FEC;
+ }
+ .toplevel_page_florex #wpcontent {
+   padding: 0 !important;
+ }
+.column-florex_sync .florex-synced {
+  color: rgb(57, 198, 0);
+ }
+.column-florex_sync span:not(.florex-synced) {
+  color: #d5d5d5;
+}

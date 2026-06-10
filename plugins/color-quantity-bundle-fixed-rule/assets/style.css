@@ -1,0 +1,149 @@
+
+
+.first-qty .quantity {
+ display: block !important;
+}
+
+
+.postid-423 .variations_form {
+     margin-top: 0 !important;
+ 
+}
+
+
+
+/* Grid layout */
+.bundle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Always 3 columns on desktop */
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* 2 columns on mobile (screen width less than 768px) */
+@media (max-width: 767px) {
+  .bundle-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Individual color item "card" */
+.bundle-item {
+  background: #fff;
+  /* border: 1px solid #ccc; */
+  border-radius: 2px;
+  padding: 0px;
+  text-align: center;
+  box-shadow:0 10px 33px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+/* Color title */
+.bundle-color-name {
+  font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: black;
+     font-family: 'Barlow', sans-serif; 
+}
+
+/* Quantity controls layout */
+.qty-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  gap: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Quantity input styling */
+.qty-controls input[type="number"] {
+  width: 28px;
+  height: 32px;
+  text-align: center;
+  font-weight: bold;
+
+   -moz-appearance: textfield;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  background: transparent;
+  appearance: textfield;
+}
+
+/* Hide spinner for Chrome, Safari, Edge, Opera */
+input.no-spinner::-webkit-outer-spin-button,
+input.no-spinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide spinner for Firefox */
+input.no-spinner {
+
+}
+
+
+
+.qty-controls button {
+   width: 50px;
+    height: 35px;
+    border: none;
+    background-color: #194260;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background 0.2s;
+    overflow: hidden;
+    
+     touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+    
+}
+
+.qty-controls button:hover {
+  background-color: #3a4b5c;
+}
+
+
+
+
+#bundle-builder-qty h3 {
+  font-family: 'Roboto', sans-serif;
+    font-size: 16.5px !important;
+    font-weight: 700 !important;
+    line-height: 1.4 !important;
+    color: #222 !important;
+}
+
+
+/* Remaining item count */
+#bundle-builder-qty .remaining {
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+  margin-top: 10px;
+  text-align: right;
+}
+
+.bundle-image {
+  margin-bottom: 8px;
+  height: auto;
+ 
+  overflow: hidden;
+}
+
+.bundle-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+

@@ -1,0 +1,117 @@
+== 4.6.0 == 27-05-2025
+* New - Save for Later
+* New - Tooltip
+
+== 4.5.3 == 19-04-2025
+* License files update
+
+== 4.5.2 == 30-03-2025
+* Improve - Login/Signup slider takes to checkout page on login
+* Fix - jQuery deprecated error
+* Fix - Basket shortcode color style option not working.
+
+== 4.5.1 == 14-03-2025
+* Fix - Divi theme not accepting wp_body_open hook
+
+== 4.5 == 11-03-2025
+* Fix - Auto open cart not working when ajax disabled
+
+== 4.4.9
+* added compatibility for themes missing wp_body_open hook
+
+== 4.4.8 ==
+* Core files update
+
+== 4.4.7 ==
+* Fix - Card layout - free gift layout
+
+== 4.4.6 ==
+* Fix - favicon not working
+* New - Card layout updates live in customizer
+
+== 4.4.5 ==
+* License files
+
+== 4.4.4 ==
+* Fix - Side cart not hiding on elementor pages.
+
+== 4.4.3 ==
+* New - Google Pay payment button
+
+== 4.4.2 ==
+* Fix - Decimal quantity update
+
+== 4.4.1 ==
+* Fix - Deprecated warning
+* Fix - Elementor keeps opening up on edit page
+
+== 4.4 ==
+* New - Confetti celebration for checkpoints
+* Fix - WPML translations not working
+* Fix - WP Rocket
+
+== 4.3 ==
+* New - Auto update feature
+
+== 4.2.2 ==
+* New - Checkpoint type - Discount
+
+== 4.2.1 ==
+* Fix - "Hide on mobile devices" not working
+* Fix - Not working on devices <= ios14
+* Fix - LTR language styling fix
+- Template update => xoo-wsc-markup.php
+
+== 4.2 ==
+* New - Login/Register option on checkout button click
+
+== 4.1.6 ==
+* Fix - Suggested products drawer doesn't open on add to cart without ajax.
+
+== 4.1.5 ==
+* Fix - Shortcode doesn't hide on pages where basket is disabled
+
+== 4.1.4 ==
+* New - Ajax now supports file uploads
+* Fix - Disable ajax for categories option not working 
+* Fix - Security
+
+
+== 4.1.3 ==
+* Rewards & Checkpoints WPML & Polylang compatibility
+
+== 4.1.2 ==
+* Fix auto open cart not working
+
+== 4.1.1 ==
+* Bugs fix
+
+== 4.1 ==
+* New - Rewards & Checkpoints
+* New - Handle add to cart error outside without opening side cart.
+
+== 4.0.5 ==
+* New - Option to disable ajax add to cart on category.
+
+== 4.0.4 ==
+* Fix - Woocommerce 8.3 compatibility
+
+== 4.0.3 ==
+* New – Option to display sale price.
+* New – Option to show variations in single/separate lines
+* New – Overlay animation on side cart toggle.
+* Template update – xoo-wsc-body.php
+
+== 4.0.2 ==
+* New - Live Customizer
+* New - Menu cart
+
+== 4.0.1 ==
+* Fix - Divi conflict
+
+== 4.0 ==
+*New* improved design
+*New* card layout
+*New* suggested product as separate slider
+*New* added styling settings
+*New* show total in the checkout button

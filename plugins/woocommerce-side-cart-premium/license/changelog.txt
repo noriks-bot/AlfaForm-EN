@@ -1,0 +1,8 @@
+== 1.0.4 == 19-04-2025
+Automatic updates fix
+
+== 1.0.3 == 13-02-2025
+Option to add license key when expired
+
+== 1.0.2 == 23-01-2025
+Crash when 2 add-ons are active ( class already exists)

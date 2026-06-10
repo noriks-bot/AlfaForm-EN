@@ -1,0 +1,23 @@
+/* Upgrade to Elite Menu - Start */
+#toplevel_page_woo-product-feed .pfp-upgrade-to-elite-menu {
+  background: linear-gradient(to left, #e63e77 50%, #d32f5e 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: background-position 0.5s ease;
+}
+
+#toplevel_page_woo-product-feed .pfp-upgrade-to-elite-menu:hover {
+  background-position: left bottom;
+}
+
+#toplevel_page_woo-product-feed .pfp-upgrade-to-elite-menu a {
+  color: #fff;
+  font-weight: 700;
+}
+
+#toplevel_page_woo-product-feed .pfp-upgrade-to-elite-menu a:hover,
+#toplevel_page_woo-product-feed .pfp-upgrade-to-elite-menu a:focus {
+  color: #fff;
+  border-color: #fff;
+}
+/* Upgrade to Elite Menu - End */

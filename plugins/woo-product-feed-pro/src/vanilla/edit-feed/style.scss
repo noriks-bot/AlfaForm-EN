@@ -1,0 +1,22 @@
+#adt-edit-feed .filters-tab-content,
+#adt-edit-feed .rules-tab-content {
+  @apply adt-tw-w-full adt-tw-mx-auto adt-tw-bg-white adt-tw-rounded-xl adt-tw-shadow-md;
+  border: 1px solid #e5e7eb;
+
+  .tab-content-header {
+    @apply adt-tw-p-4 adt-tw-box-border;
+    border-bottom: 1px solid #e5e7eb;
+
+    h1 {
+      @apply adt-tw-text-2xl adt-tw-font-bold;
+    }
+
+    p {
+      @apply adt-tw-text-gray-600 adt-tw-text-sm adt-tw-mt-0 adt-tw-mb-1;
+    }
+  }
+
+  .tab-content-body {
+    @apply adt-tw-p-4;
+  }
+}

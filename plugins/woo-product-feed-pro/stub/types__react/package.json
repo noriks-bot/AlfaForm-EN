@@ -1,0 +1,8 @@
+{
+  "name": "@types/react",
+  "version": "18.0.0",
+  "description": "Stub package to satisfy peer dependencies without installing actual React types",
+  "main": "index.js",
+  "types": "index.d.ts"
+}
+

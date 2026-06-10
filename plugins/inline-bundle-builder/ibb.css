@@ -1,0 +1,246 @@
+.ibb-slot-attr-gratis {
+    display: block;
+    color: gray;
+}
+
+
+.xoo-wsc-container  .variation dt.variation- {
+    display: none !important;
+}
+
+
+.xoo-wsc-container  .variation dd.variation- {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ---------- Reset / base ---------- */
+.ibb{ font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif; }
+.ibb *{ box-sizing:border-box; }
+.ibb img{ max-width:100%; display:block; }
+
+/* ---------- Header + nav ---------- */
+.ibb-top{ border:1px solid #e5e7eb; padding:10px; border-radius:12px; background:#fff; }
+.ibb-title{ font-weight:800; font-size:16px; margin:0 0 8px; }
+
+.ibb-steps{ display:flex; gap:8px; flex-wrap:wrap; }
+.ibb-step{
+  font-weight:700; font-size:14px; padding:8px 14px; border-radius:3px; border:1px solid #e5e7eb; background:#fff; color:#111;
+  white-space:nowrap; cursor:pointer;
+}
+.ibb-step.is-active{ background:#101010; color:#fff; border-color:#101010; }
+
+.ibb-nav{
+  width:36px; height:36px; border-radius:50%;
+  padding:0; border:1px solid #e5e7eb; background:#fff; appearance:none; -webkit-appearance:none; box-sizing:border-box;
+  display:grid; place-items:center;
+  font-size:20px; line-height:1; color:#111; cursor:pointer;
+  box-shadow:0 1px 0 rgba(0,0,0,.04);
+}
+.ibb-nav[disabled]{ opacity:.4; cursor:not-allowed; pointer-events:none; }
+
+.ibb-modal__close{
+  position:absolute; top:10px; right:10px;
+  width:40px; height:40px; color:#fff; background:#971b1b; font-size:25px; cursor:pointer;
+  border-radius:2px; padding:0; border:0;
+}
+
+/* ---------- Title in modal ---------- */
+.ibb-titlebar{ padding:8px 16px 0; text-align:center; }
+.ibb-titlebar h2{ margin:0; font-size:26px; line-height:1.2; font-weight:800; color:#101010; font-family:'Barlow', sans-serif; }
+.ibb-titlebar p{ margin:2px 0 0 0; color:#444444; font-size:14px; }
+
+/* ---------- Modal + slide animations (two-phase: .show then .open) ---------- */
+.ibb-modal{
+  position:fixed; inset:0; display:none; z-index:999999999999;
+  background:rgba(0,0,0,0);
+  transition: background .55s ease;
+  overflow-x:hidden; /* lock horizontal scroll globally */
+}
+.ibb-modal.show{ display:block; background:rgba(0,0,0,0); }
+.ibb-modal.open{ background:#000000c7; }
+
+.ibb-modal__backdrop{ position:absolute; inset:0; }
+
+/* Panel */
+.ibb-modal__box{
+  position:absolute; left:50%; bottom:0;
+  width:96%; max-width:1400px; max-height:85vh; overflow:auto;
+  overflow-x:hidden;
+  background:#fff; border-top-left-radius:8px; border-top-right-radius:8px;
+  box-shadow:0 10px 40px rgba(0,0,0,.25);
+
+  transform:translate(-50%, 100%); opacity:0;
+  transition: transform .35s cubic-bezier(.22,.61,.36,1), opacity .35s ease;
+  will-change: transform, opacity;
+}
+.ibb-modal.open .ibb-modal__box{ transform:translate(-50%, 0); opacity:1; }
+.ibb-modal.closing{ display:block; background:rgba(0,0,0,0); }
+.ibb-modal.closing .ibb-modal__box{ transform:translate(-50%, 100%); opacity:0; }
+
+/* ---------- Modal header layout ---------- */
+.ibb-modal__head{
+  position:sticky; top:0; background:#e7e7e7;
+  padding:12px 16px 5px 16px; border-bottom:1px solid #e5e7eb;
+  display:flex; flex-direction:column; gap:6px;
+  overflow-x:hidden;
+}
+
+.ibb-steps-row{
+  display:flex; justify-content:space-between; align-items:center;
+  overflow:hidden; /* contain the inner horizontal scroller */
+}
+
+/* Only this strip can scroll horizontally */
+.ibb-steps-nav{
+  display:flex; align-items:center; gap:8px; justify-content:center; flex:1;
+  overflow-x:auto; overflow-y:hidden; -webkit-overflow-scrolling:touch; scroll-behavior:smooth;
+  white-space:nowrap;
+}
+
+/* children shouldn’t shrink/wrap */
+.ibb-steps{ display:inline-flex; flex-wrap:nowrap; gap:8px; flex:0 0 auto; white-space:nowrap; }
+.ibb-step, .ibb-nav{ flex:0 0 auto; }
+
+/* ---------- Mobile-only chevron close ---------- */
+.ibb-modal__close-mobile{ display:none; }
+
+@media (max-width: 800px){
+  /* hide desktop X on mobile */
+  .ibb-modal__close{ display:none; }
+
+  /* show the chevron close */
+  .ibb-modal__close-mobile{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    padding:6px 0;
+    background:transparent;
+    border:0;
+    color:#333;
+    font-size:22px;      /* chevron size */
+    line-height:1;
+    cursor:pointer;
+  }
+
+  /* small pill behind the chevron (purely visual) */
+  .ibb-modal__close-mobile::before{
+   
+   
+  }
+  .ibb-modal__close-mobile{ position:relative; }
+  .ibb-modal__close-mobile{ color:#fff;         margin-bottom: -16px;
+        margin-top: -20px; } /* chevron text in white */
+        
+        
+        .ibb-modal__close-mobile:hover { background:transparent; }
+}
+
+/* ---------- Modal body ---------- */
+.ibb-modal__body{
+  padding:16px; background:#f6f6f6d4;
+  overflow-x:hidden;
+}
+
+/* Lock page scroll while modal open */
+body.ibb-lock{ overflow:hidden; }
+
+/* ---------- Products grid in modal ---------- */
+.ibb-grid{ display:grid; gap:16px; grid-template-columns:repeat(5,minmax(200px,1fr)); }
+@media (max-width:1200px){ .ibb-grid{ grid-template-columns:repeat(4,minmax(200px,1fr)); } }
+@media (max-width:992px){  .ibb-grid{ grid-template-columns:repeat(3,minmax(180px,1fr)); } }
+@media (max-width:768px){  .ibb-grid{ grid-template-columns:repeat(2,minmax(160px,1fr)); } }
+@media (max-width:480px){  .ibb-grid{ grid-template-columns:repeat(2,1fr); } }
+
+.ibb-card{ background:#fff; border:1px solid #e5e7eb; border-radius:8px; overflow:hidden; display:flex; flex-direction:column; align-items:stretch; box-shadow:0 2px 0 rgba(0,0,0,.04); }
+.ibb-card img{ padding:10px 25px 0 25px; }
+.ibb-card .ibb-label{ text-align:center; font-size:15px; margin-top:-6px; margin-bottom:-4px; }
+.ibb-card-body{ padding:9px 12px 0 12px; display:flex; flex-direction:column; gap:8px; }
+.ibb-card-title{ font-weight:800; font-size:14px; color:#101010; text-align:center; }
+
+/* ---------- Attrs/selects ---------- */
+.ibb-attr{ display:flex; flex-direction:column; gap:4px; font-size:16px; text-align:center; padding:5px; }
+.ibb-attr > span{ color:#475569; }
+.ibb-attr select{ padding:8px 10px; border-radius:10px; border:1px solid #e5e7eb; background:#fff; font-size:16px; text-align:center; }
+
+/* ---------- Buttons/messages ---------- */
+.ibb-add{ background:#101010; color:#fff; padding:10px 12px; border-radius:4px; border:0; cursor:pointer; }
+.ibb-add:hover{ background:#971b1b; color:#fff; }
+.ibb-add[disabled]{ opacity:.5; cursor:not-allowed; }
+.ibb-msg{
+  min-height:16px; font-size:12px; color:#0f5132;
+  margin-bottom:2px; text-align:center; margin-top:-3px;
+}
+
+/* ---------- Slots on product page ---------- */
+.ibb-slots{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:12px 0 8px; }
+.ibb-slot{
+  width:100%; flex:1 1 0; min-width:0; display:flex; flex-direction:column; align-items:center; justify-content:space-between;
+  height:200px; background:#fff; border:2px dashed #000; border-radius:10px; padding:10px 12px; position:relative;
+  transition:border-color .2s ease, box-shadow .2s ease, background .2s ease; text-align:center;
+}
+.ibb-slot:hover{ border-color:#101010; box-shadow:0 1px 0 rgba(0,0,0,.05); background:#f4f4f4; cursor:pointer; }
+
+/* Slot states */
+.ibb-slot.is-empty{ border-style:dashed; }
+.ibb-slot.is-filled{ border-style:solid; }
+
+/* Thumbnail area */
+.ibb-slot-thumb{ width:90px; height:120px; border-radius:4px; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+.ibb-slot-thumb img{ width:100%; height:100%; object-fit:cover; }
+
+.ibb-slot-header{ color:#222 !important; font-family:'Roboto',sans-serif; font-size:14px !important; font-weight:700 !important; line-height:1.4 !important; margin-bottom:7px; }
+
+/* Plus sign for EMPTY slot */
+.ibb-slot-plus{ font-size:42px; line-height:1; color:black; display:none; }
+.ibb-slot.is-empty .ibb-slot-plus{ display:block; }
+.ibb-slot.is-empty img{ display:none; }
+
+/* Info (single line now: .ibb-slot-attr for both states) */
+.ibb-slot-info{ display:flex; flex-direction:column; gap:2px; font-size:14px; padding-bottom:7px; }
+.ibb-slot-attr{ color:#101010; font-weight:800; }
+.ibb-slot.is-filled .ibb-slot-attr{ font-weight:700; }
+.ibb-slot-price{ color:#0f172a; font-weight:700; }
+
+/* Remove button — only for filled slots */
+.ibb-slot-remove{ position:absolute; right:-7px; top:-11px; width:22px; height:22px; background:#000; color:#fff; font-size:13px; cursor:pointer; border-radius:50%; padding:0; border:0; }
+.ibb-slot-remove:hover{ background:#111; }
+.ibb-slot.is-empty .ibb-slot-remove{ display:none; }
+
+/* ---------- Native ATC disabled style ---------- */
+.cqbf-disabled{ opacity:.6; cursor:not-allowed; pointer-events:none; }
+
+/* ---------- Small screens ---------- */
+@media (max-width: 640px){
+  .ibb-modal{ padding:0; }
+  .ibb-modal__box{ width:100%; max-height:90vh; border-radius:0; border-top-left-radius:10px; border-top-right-radius:10px; }
+  .ibb-modal__head{ padding:10px 16px; }
+  .ibb-titlebar h2{ font-size:18px; }
+  .ibb-label{ display:none; }
+}
+
+/* Additional mobile tweaks */
+
+.ibb-add:hover{ background:black !important; color:#fff; }
+
+@media (max-width: 800px){
+  .ibb-steps-nav{
+    overflow-x:auto; overflow-y:hidden; -webkit-overflow-scrolling:touch;
+    white-space:nowrap;
+    justify-content: unset;
+    padding-bottom:5px;
+  }
+  .ibb-steps{ display:inline-flex; flex-wrap:nowrap; gap:8px; }
+  .ibb-steps-nav::-webkit-scrollbar{ height:6px; }
+  .ibb-steps-nav::-webkit-scrollbar-thumb{ background:#ddd; border-radius:6px; }
+}
+
+/* ---------- Step transition fade (fallback) ---------- */
+.ibb-modal__body{ opacity:1; transition:opacity .5s ease; }
+.ibb-modal__body.is-fading{ opacity:0; }
+
+/* Fade animation for product cards on step change (fallback) */
+.ibb-grid{ transition: opacity .25s ease; }
+.ibb-grid.is-fading{ opacity:0; }

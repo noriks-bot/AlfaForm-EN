@@ -1,0 +1,431 @@
+<?php
+
+defined( 'ABSPATH' ) || exit();
+
+/**
+ *
+ * @package PaymentPlugins\Controllers
+ * @author  PaymentPlugins
+ *
+ */
+class WC_Stripe_Controller_Gateway_Settings extends WC_Stripe_Rest_Controller {
+
+	protected $namespace = 'gateway-settings';
+
+	public function register_routes() {
+		register_rest_route(
+			$this->rest_uri(), 'apple-domain', array(
+				'methods'             => WP_REST_Server::CREATABLE,
+				'callback'            => array( $this, 'register_apple_domain' ),
+				'permission_callback' => array( $this, 'shop_manager_permission_check' )
+			)
+		);
+		register_rest_route( $this->rest_uri(), 'create-webhook',
+			array(
+				'methods'             => WP_REST_Server::CREATABLE,
+				'callback'            => array( $this, 'create_webhook' ),
+				'permission_callback' => array( $this, 'shop_manager_permission_check' )
+			)
+		);
+		register_rest_route( $this->rest_uri(), 'delete-webhook', array(
+			'methods'             => WP_REST_Server::CREATABLE,
+			'callback'            => array( $this, 'delete_webhook' ),
+			'permission_callback' => array( $this, 'shop_manager_permission_check' )
+		) );
+		register_rest_route( $this->rest_uri(), 'connection-test',
+			array(
+				'methods'             => WP_REST_Server::CREATABLE,
+				'callback'            => array( $this, 'connection_test' ),
+				'permission_callback' => array( $this, 'shop_manager_permission_check' )
+			)
+		);
+		register_rest_route( $this->rest_uri(), 'delete-connection',
+			array(
+				'methods'             => WP_REST_Server::CREATABLE,
+				'callback'            => array( $this, 'delete_connection' ),
+				'permission_callback' => array( $this, 'shop_manager_permission_check' )
+			)
+		);
+		register_rest_route( $this->rest_uri(), 'create-payment-config',
+			array(
+				'methods'             => WP_REST_Server::CREATABLE,
+				'callback'            => array( $this, 'create_payment_config' ),
+				'permission_callback' => array( $this, 'shop_manager_permission_check' )
+			)
+		);
+		register_rest_route( $this->rest_uri(), 'fetch-payment-config',
+			array(
+				'methods'             => WP_REST_Server::CREATABLE,
+				'callback'            => array( $this, 'fetch_payment_config' ),
+				'permission_callback' => array( $this, 'shop_manager_permission_check' )
+			)
+		);
+		register_rest_route( $this->rest_uri(), 'refresh-payment-config',
+			array(
+				'methods'             => WP_REST_Server::CREATABLE,
+				'callback'            => array( $this, 'refresh_payment_config' ),
+				'permission_callback' => array( $this, 'shop_manager_permission_check' )
+			)
+		);
+	}
+
+	/**
+	 * Register the site domain with Stripe for Apple Pay.
+	 *
+	 * @param WP_REST_Request $request
+	 */
+	public function register_apple_domain( $request ) {
+		$gateway = WC_Stripe_Gateway::load();
+
+		// try to add domain association file.
+		if ( isset( $_SERVER['DOCUMENT_ROOT'] ) ) {
+			$path = $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . '.well-known';
+			$file = $path . DIRECTORY_SEPARATOR . 'apple-developer-merchantid-domain-association';
+			if ( ! file_exists( $file ) ) {
+				require_once( ABSPATH . '/wp-admin/includes/file.php' );
+				if ( function_exists( 'WP_Filesystem' ) && ( WP_Filesystem() ) ) {
+					/**
+					 *
+					 * @var WP_Filesystem_Base $wp_filesystem
+					 */
+					global $wp_filesystem;
+					if ( ! $wp_filesystem->is_dir( $path ) ) {
+						$wp_filesystem->mkdir( $path );
+					}
+					$contents = $wp_filesystem->get_contents( WC_STRIPE_PLUGIN_FILE_PATH . 'apple-developer-merchantid-domain-association' );
+					$wp_filesystem->put_contents( $file, $contents, 0755 );
+				}
+			}
+		}
+		$server_name = ! empty( $request['hostname'] ) ? $request['hostname'] : $_SERVER['SERVER_NAME'];
+		/**
+		 * @since 3.3.9
+		 */
+		$server_name = apply_filters( 'wc_stripe_apple_pay_domain', $server_name );
+		$domains     = array( $server_name );
+
+		try {
+			$modes    = array( 'test', 'live' );
+			$messages = array();
+
+			foreach ( $modes as $mode ) {
+				$api_key = wc_stripe_get_secret_key( $mode );
+				if ( empty( $api_key ) ) {
+					$messages[] = sprintf( __( 'Domain could not be registered in %s mode. %s mode is not connected.', 'woocommerce' ), $server_name, ucfirst( $mode ) );
+					continue; // Skip this mode if no secret key
+				}
+
+				// Fetch existing payment method domains
+				$registered_domains = $gateway->mode( $mode )->paymentMethodDomains->all( array( 'limit' => 50 ) );
+
+				if ( is_wp_error( $registered_domains ) ) {
+					$messages[] = sprintf( __( 'Error fetching domains for %s mode: %s', 'woo-stripe-payment' ), $mode, $registered_domains->get_error_message() );
+					continue;
+				}
+
+				// These are the filtered domains
+				$filtered_domains = array_filter( $registered_domains->data, function ( $domain ) use ( $domains ) {
+					return in_array( $domain->domain_name, $domains, true );
+				} );
+
+				// loop through the domains and if there is no filtered domain entry, create it.
+				foreach ( $domains as $domain_name ) {
+					$result = null;
+					foreach ( $filtered_domains as $filtered_domain ) {
+						if ( $filtered_domain->domain_name === $domain_name ) {
+							$result = $filtered_domain;
+							break;
+						}
+					}
+					if ( ! $result ) {
+						$response = $gateway->mode( $mode )->paymentMethodDomains->create( array(
+							'domain_name' => $domain_name,
+							'enabled'     => true
+						) );
+						if ( is_wp_error( $response ) ) {
+							$messages[] = sprintf( __( 'Error creating domain %s for %s mode: %s', 'woo-stripe-payment' ), $domain_name, $mode, $response->get_error_message() );
+						} else {
+							$messages[] = sprintf(
+								__( 'Domain %s registered successfully. You can confirm in your Stripe Dashboard at %s.', 'woo-stripe-payment' ),
+								$domain_name,
+								'https://dashboard.stripe.com/settings/payment_method_domains'
+							);
+						}
+					} else {
+						// get the first entry and update it.
+						$response = $gateway->mode( $mode )->paymentMethodDomains->update( $result->id, array( 'enabled' => true ) );
+						if ( is_wp_error( $response ) ) {
+							$messages[] = sprintf( __( 'Error updating domain %s for %s mode: %s', 'woo-stripe-payment' ), $domain_name, $mode, $response->get_error_message() );
+						} else {
+							$messages[] = sprintf( __( 'Domain %s enabled successfully for %s mode.', 'woo-stripe-payment' ), $domain_name, $mode );
+						}
+					}
+				}
+			}
+		} catch ( Exception $e ) {
+			$messages[] = $e->getMessage();
+		}
+
+		return rest_ensure_response(
+			array(
+				'messages' => $messages,
+			)
+		);
+	}
+
+	/**
+	 * Create a Stripe webhook for the site.
+	 *
+	 * @param WP_REST_Request $request
+	 */
+	public function create_webhook( $request ) {
+		$url          = stripe_wc()->rest_api->webhook->rest_url( 'webhook' );
+		$api_settings = stripe_wc()->api_settings;
+		$env          = $request->get_param( 'environment' );
+		$gateway      = WC_Stripe_Gateway::load( $env );
+		$events       = array();
+		// first fetch all webhooks
+		$secret_key = wc_stripe_get_secret_key( $env );
+		if ( empty( $secret_key ) ) {
+			return new WP_Error( 'webhook-error', __( 'You must configure your secret key before creating webhooks.', 'woo-stripe-payment' ),
+				array(
+					'status' => 200,
+				)
+			);
+		}
+		$webhooks = $gateway->webhookEndpoints->all( array( 'limit' => 100 ) );
+		if ( ! is_wp_error( $webhooks ) ) {
+			// validate that the webhook hasn't already been created.
+			foreach ( $webhooks->data as $webhook ) {
+				/**
+				 * @var \Stripe\WebhookEndpoint $webhook
+				 */
+				if ( $webhook->url === $url ) {
+					if ( ! $api_settings->get_option( "webhook_secret_{$env}", null ) ) {
+						// get all of the events for this endpoint so they can be merged with the
+						// new webhook that's created.
+						$events = $webhook->enabled_events;
+						$gateway->webhookEndpoints->delete( $webhook->id );
+						$api_settings->delete_webhook_settings( $env );
+					} else {
+						return new WP_Error( 'webhook-error',
+							__( 'There is already a webhook configured for this site. If you want to delete the webhook, login to your Stripe Dashboard.', 'woo-stripe-payment' ),
+							array(
+								'status' => 200,
+							)
+						);
+					}
+				}
+			}
+		}
+
+		$webhook = $api_settings->create_webhook( $env, $events );
+		if ( is_wp_error( $webhook ) ) {
+			return new WP_Error( $webhook->get_error_code(), $webhook->get_error_message(), array( 'status' => 200 ) );
+		} else {
+			return rest_ensure_response(
+				array(
+					'message' => sprintf(
+						__( 'Webhook created in Stripe for %s environment. You can test your webhook by logging in to the Stripe dashboard',
+							'woo-stripe-payment' ),
+						'live' ==
+						$env ? __( 'Live', 'woo-stripe-payment' ) : __( 'Test', 'woo-stripe-payment' )
+					),
+					'secret'  => $webhook['secret'],
+				)
+			);
+		}
+	}
+
+	/**
+	 * @param \WP_REST_Request $request
+	 */
+	public function delete_webhook( $request ) {
+		$api_settings = stripe_wc()->api_settings;
+		$mode         = $request['mode'];
+		$webhook_id   = $api_settings->get_webhook_id( $mode );
+		if ( $webhook_id ) {
+			$client = WC_Stripe_Gateway::load( $mode );
+			$result = $client->webhookEndpoints->delete( $webhook_id );
+			$api_settings->delete_webhook_settings( $mode );
+			if ( is_wp_error( $result ) ) {
+				return new WP_Error( $result->get_error_code(), $result->get_error_message(), array( 'status' => 200 ) );
+			}
+		}
+
+		return rest_ensure_response( array( 'success' => true ) );
+	}
+
+	/**
+	 * Perform a connection test
+	 *
+	 * @param WP_REST_Request $request
+	 */
+	public function connection_test( $request ) {
+		$mode     = $request->get_param( 'mode' );
+		$settings = stripe_wc()->api_settings;
+		$api_keys = null;
+
+		// capture all output to prevent JSON parse output errors.
+		ob_start();
+		try {
+			if ( $mode === 'test' ) {
+				// if test mode and keys not empty, save them so connect test uses most recently entered keys.
+				$api_keys = array( $request->get_param( 'secret_key' ), $request->get_param( 'publishable_key' ) );
+
+				if ( in_array( null, $api_keys ) ) {
+					throw new Exception( sprintf( __( 'You must enter your API keys or connect the plugin before performing a connection test.',
+						'woo-stripe-payment' ) ) );
+				}
+				$settings->settings['publishable_key_test'] = $settings->validate_text_field( 'publishable_key_test',
+					$request->get_param( 'publishable_key' ) );
+				$settings->settings['secret_key_test']      = $settings->validate_password_field( 'secret_key_test',
+					$request->get_param( 'secret_key' ) );
+			}
+
+			// test the secret key
+			$response = WC_Stripe_Gateway::load()->customers->mode( $mode )->all( array( 'limit' => 1 ) );
+
+			if ( is_wp_error( $response ) ) {
+				throw new Exception( sprintf( __( 'Mode: %s. Invalid secret key. Please check your entry.', 'woo-stripe-payment' ), $mode ) );
+			}
+
+			// test the publishable key
+			$response = wp_remote_post(
+				'https://api.stripe.com/v1/payment_methods',
+				array(
+					'headers' => array( 'Content-Type' => 'application/x-www-form-urlencoded' ),
+					'body'    => array(
+						'key'      => wc_stripe_get_publishable_key( $mode ),
+						'type'     => 'card',
+						'card'     => array(
+							'number'    => '4242424242424242',
+							'exp_month' => 12,
+							'exp_year'  => 2030,
+							'cvc'       => 314
+						),
+						'metadata' => array(
+							'origin' => 'API Settings connection test'
+						)
+					),
+				)
+			);
+			if ( is_wp_error( $response ) ) {
+				throw new Exception( sprintf( __( 'Mode: %s. Invalid publishable key. Please check your entry.', 'woo-stripe-payment' ), $mode ) );
+			}
+			if ( $response['response']['code'] == 401 ) {
+				throw new Exception( sprintf( __( 'Mode: %s. Invalid publishable key. Please check your entry.', 'woo-stripe-payment' ), $mode ) );
+			}
+
+			// if test mode and keys are good, save them
+			if ( $api_keys ) {
+				update_option( $settings->get_option_key(), $settings->settings, 'yes' );
+				do_action( 'wc_stripe_api_connection_test_success', $mode );
+			}
+			ob_get_clean();
+		} catch ( Exception $e ) {
+			return new WP_Error( 'connection-failure', $e->getMessage(), array( 'status' => 200 ) );
+		}
+
+		return rest_ensure_response( array(
+			'message' => sprintf( __( 'Connection test to Stripe was successful. Mode: %s.', 'woo-stripe-payment' ), $mode )
+		) );
+	}
+
+	/**
+	 * @param \WP_REST_Request $request
+	 */
+	public function delete_connection( $request ) {
+		stripe_wc()->api_settings->delete_account_settings();
+		stripe_wc()->account_settings->delete_account_settings();
+
+		return rest_ensure_response( array( 'success', true ) );
+	}
+
+	public function create_payment_config( WP_REST_Request $request ) {
+		global $current_section;
+		$mode = wc_stripe_mode();
+		$name = $request->get_param( 'name' );
+		/**
+		 * @var \WC_Payment_Gateway_Stripe_UPM $payment_method
+		 */
+		$payment_method = WC()->payment_gateways()->payment_gateways()['stripe_upm'];
+		try {
+			$response = $payment_method->gateway->mode( $mode )->paymentMethodConfigurations->create( array(
+				'name' => $name
+			) );
+			if ( is_wp_error( $response ) ) {
+				throw new \Exception( sprintf( __( 'Error creating payment method configuration. Reason: %s', 'woo-stripe-payment' ), $response->get_error_message() ) );
+			}
+			$payment_method->update_payment_method_configuration( $response->id, $mode );
+			$payment_method->update_available_payment_methods(
+				$payment_method->map_payment_config_to_payment_methods( $response ),
+				$mode
+			);
+			$current_section = $payment_method->id;
+			$payment_method->init_form_fields();
+			ob_start();
+			$payment_method->admin_options();
+
+			return array(
+				'html' => ob_get_clean()
+			);
+		} catch ( \Exception $e ) {
+			return new WP_Error( 'stripe_error', $e->getMessage(), array( 'status' => 200 ) );
+		}
+	}
+
+	public function fetch_payment_config( WP_REST_Request $request ) {
+		global $current_section;
+		$mode = wc_stripe_mode();
+		$id   = $request->get_param( 'payment_config' );
+		/**
+		 * @var \WC_Payment_Gateway_Stripe_UPM $payment_method
+		 */
+		$payment_method = WC()->payment_gateways()->payment_gateways()['stripe_upm'];
+
+		try {
+			$config = $payment_method->gateway->mode( $mode )->paymentMethodConfigurations->retrieve( $id );
+			if ( is_wp_error( $config ) ) {
+				wc_stripe_log_error( sprintf( 'Error retrieving payment method config. Reason: %s', $config->get_error_message() ) );
+				throw new \Exception( __( 'Error retrieving payment method config. Check logs for more details.', 'woo-stripe-payment' ) );
+			}
+
+			$payment_method->update_payment_method_configuration( $id, $mode );
+			$payment_method->update_available_payment_methods(
+				$payment_method->map_payment_config_to_payment_methods( $config ),
+				$mode
+			);
+			$current_section = $payment_method->id;
+			$payment_method->init_form_fields();
+			ob_start();
+			$payment_method->admin_options();
+
+			return array(
+				'html' => ob_get_clean()
+			);
+		} catch ( \Exception $e ) {
+			return new WP_Error( 'stripe_error', $e->getMessage(), array( 'status' => 200 ) );
+		}
+	}
+
+	public function refresh_payment_config( WP_REST_Request $request ) {
+		/**
+		 * @var \WC_Payment_Gateway_Stripe_UPM $payment_method
+		 */
+		$payment_method = WC()->payment_gateways()->payment_gateways()['stripe_upm'];
+		$request->set_param( 'payment_config', $payment_method->get_payment_method_configuration() );
+
+		return $this->fetch_payment_config( $request );
+	}
+
+	public function shop_manager_permission_check() {
+		if ( current_user_can( 'manage_woocommerce' ) ) {
+			return true;
+		}
+
+		return new WP_Error( 'permission-error', __( 'You do not have permissions to access this resource.', 'woo-stripe-payment' ),
+			array( 'status' => 403 ) );
+	}
+
+}

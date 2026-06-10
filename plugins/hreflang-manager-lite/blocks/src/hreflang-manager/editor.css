@@ -1,0 +1,178 @@
+/* The button on top of the sidebar */
+button.components-button[aria-label="Hreflang Manager"] > span{
+    margin-right: 2px !important;
+}
+
+/* Sidebar START ---------------------------------------------------------------------------------------------------- */
+
+.daexthrmal-set-connection{
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    height: 47px !important;
+    font-size: 16px;
+    padding: 13px 15px !important;
+}
+
+.daexthrmal-set-connection:hover{
+    background: #f8f9f9 !important;
+}
+
+.daexthrmal-set-connection-container{
+    width: 100%;
+}
+
+.daexthrmal-set-connection-text{
+    float: left;
+    height: 21px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #191e23;
+    line-height: 21px;
+}
+
+.daexthrmal-set-connection-text:hover{
+    color: #191e23;
+}
+
+.daexthrmal-set-connection-icon{
+    float: right;
+    height: 21px !important;
+    line-height: 21px !important;
+    color: #191e23;
+}
+
+.daexthrmal-set-connection-icon:hover{
+    color: #191e23;
+}
+
+/* Sidebar END ------------------------------------------------------------------------------------------------------ */
+
+/* Modal START ------------------------------------------------------------------------------------------------------ */
+
+.daexthrmal-modal{
+    width: 800px;
+    max-height: 556px;
+}
+
+.daexthrmal-modal .components-modal__header{
+    margin-bottom: 0;
+}
+
+.daexthrmal-single-connection{
+    display: flex;
+    flex-direction: column;
+}
+
+.daexthrmal-single-connection:not(:last-of-type){
+    margin-bottom: 8px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.daexthrmal-modal .components-modal__content{
+    padding-bottom: 0;
+}
+
+.daexthrmal-single-connection .components-base-control{
+    margin: 0 -24px 0;
+}
+
+.daexthrmal-single-connection:last-of-type{
+    margin-bottom: 32px;
+}
+
+.daexthrmal-single-connection:last-of-type .components-base-control:last-of-type{
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.daexthrmal-single-connection .components-base-control__label,
+.daexthrmal-single-connection .components-input-control__label{
+    margin-bottom: 8px;
+    margin-top: 16px;
+}
+
+.daexthrmal-single-connection .components-base-control .components-base-control__field{
+    margin: 0 24px 0;
+}
+
+.daexthrmal-synthetic-label{
+    margin-bottom: 8px;
+    cursor: pointer;
+    margin-top: 16px;
+    color: #555d66;
+}
+
+/* Input Field */
+.daexthrmal-single-connection .components-base-control .components-text-control__input{
+}
+
+.daexthrmal-single-connection .components-base-control .components-text-control__input:focus{
+    border-color: #5b9dd9;
+    box-shadow: none;
+    outline: none;
+}
+
+.daexthrmal-single-connection .components-flex{
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 0 !important;
+}
+
+.daexthrmal-single-connection .components-select-control > div:first-of-type{
+    display: inline-block !important;
+    float: left;
+}
+
+.daexthrmal-combobox-control{
+    width: auto;
+}
+
+.daexthrmal-single-connection .components-flex__item{
+    margin-right: 16px !important;
+    float: left !important;
+}
+
+.daexthrmal-single-connection .components-input-control__container{
+    width: 500px !important;
+    /*display: inline-block !important;*/
+    margin-left: 0;
+}
+
+.daexthrmal-single-connection .components-base-control .components-select-control__input{
+    width: 100% !important;
+    border-color: #dddddd !important;
+    border-radius: 0 !important;
+    color: #333 !important;
+    height: 24px !important;
+    display: inline-block !important;
+    line-height: 16px !important;
+    margin: 0 !important;
+    min-height: auto !important;
+    padding: 0 8px !important;
+    font-size: 12px !important;
+    max-width: 100% !important;
+    width: 543px !important;
+}
+
+.daexthrmal-single-connection .components-base-control .components-select-control__input:focus{
+    border-color: #5b9dd9;
+    box-shadow: none;
+    outline: none;
+
+}
+
+@media (max-width: 828px){
+    .daexthrmal-single-connection .components-base-control__label,
+    .daexthrmal-single-connection .components-input-control__label{
+        text-align: left;
+    }
+
+    .daexthrmal-single-connection .components-flex{
+        flex-direction: column !important;
+    }
+}
+
+/* Modal END -------------------------------------------------------------------------------------------------------- */

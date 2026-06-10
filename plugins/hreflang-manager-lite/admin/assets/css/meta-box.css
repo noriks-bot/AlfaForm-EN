@@ -1,0 +1,54 @@
+#daexthrmal-meta > .inside {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.daexthrmal-metabox-single-connection{
+    display: flex;
+    flex-direction: column;
+}
+
+.daexthrmal-metabox-single-connection:not(:last-of-type){
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.daexthrmal-field {
+    position: relative;
+    margin: 0;
+    padding: 0 16px;
+    margin-top: 16px;
+}
+
+.daexthrmal-field:last-of-type{
+    margin-bottom: 16px;
+}
+
+.daexthrmal-field label {
+    display: block;
+    font-weight: 500;
+    margin: 0 0 3px;
+    padding: 0;
+}
+
+.daexthrmal-field input[type=text] {
+    width: 100%;
+    padding: 4px 8px;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.daexthrmal-field select {
+    width: 100%;
+    padding: 4px 8px;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.daexthrmal-label {
+    vertical-align: top;
+    margin: 0 0 10px;
+}

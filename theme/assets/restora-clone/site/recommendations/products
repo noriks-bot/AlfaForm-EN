@@ -1,0 +1,709 @@
+<section id="shopify-section-template--30066190483788__main" class="shopify-section shopify-section--main-product"><style>
+  #shopify-section-template--30066190483788__main {
+    --section-background-hash: 0;
+  }
+
+  #shopify-section-template--30066190483788__main + * {
+    --previous-section-background-hash: 0;
+  }</style><style>
+  #shopify-section-template--30066190483788__main {
+    --product-grid: auto / minmax(0, 1fr);
+    --product-gallery-media-list-grid: auto / auto-flow 100%;
+    --product-gallery-media-list-gap: var(--spacing-0-5);
+  }
+
+  @media screen and (max-width: 999px) {
+    #shopify-section-template--30066190483788__main {
+      --section-spacing-block-start: 0px;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    #shopify-section-template--30066190483788__main {--product-grid: auto / minmax(0, 1.2fr) minmax(0, 0.8fr);
+      --product-gallery-media-list-grid: auto / auto-flow 100%;
+      --product-gallery-media-list-gap: calc(var(--grid-gutter) / 2);
+    }}
+
+  @media screen and (min-width: 1400px) {
+    #shopify-section-template--30066190483788__main {
+      --product-gallery-media-list-gap: var(--grid-gutter);
+    }
+  }
+</style><div class="section section--tight  section-blends section-full">
+  <product-rerender id="product-info-15152183443788-template--30066190483788__main" observe-form="product-form-15152183443788-template--30066190483788__main" allow-partial-rerender>
+    <div class="product"><product-gallery form="product-form-15152183443788-template--30066190483788__main" filtered-indexes="[]" class="product-gallery  product-gallery--desktop-carousel product-gallery--desktop-thumbnails-left product-gallery--mobile-expanded"><div class="product-gallery__ar-wrapper">
+    <div class="product-gallery__media-list-wrapper"><custom-cursor class="product-gallery__cursor" >
+          <div class="circle-button circle-button--fill circle-button--lg"><svg role="presentation" focusable="false" width="7" height="10" class="icon icon-chevron-right" viewBox="0 0 7 10">
+        <path d="m1 9 4-4-4-4" fill="none" stroke="currentColor" stroke-width="2"></path>
+      </svg></div>
+        </custom-cursor><media-carousel desktop-mode="carousel_thumbnails_left" adaptive-height initial-index="0"  id="product-gallery-15152183443788-template--30066190483788__main" class="product-gallery__media-list full-bleed scroll-area md:unbleed"><div class="product-gallery__media  snap-center" data-media-type="image" data-media-id="56700352561484" ><img src="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0HD.webp?v=1771634981&amp;width=1200" alt="Oreiller Soya 2.0" srcset="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0HD.webp?v=1771634981&amp;width=200 200w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0HD.webp?v=1771634981&amp;width=300 300w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0HD.webp?v=1771634981&amp;width=400 400w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0HD.webp?v=1771634981&amp;width=500 500w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0HD.webp?v=1771634981&amp;width=600 600w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0HD.webp?v=1771634981&amp;width=700 700w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0HD.webp?v=1771634981&amp;width=800 800w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0HD.webp?v=1771634981&amp;width=1000 1000w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0HD.webp?v=1771634981&amp;width=1200 1200w" width="1200" height="1200" loading="eager" fetchpriority="high" sizes="(max-width: 740px) calc(100vw - 40px), (max-width: 999px) calc(100vw - 64px), min(730px, 40vw)" class="rounded"></div><div class="product-gallery__media  snap-center" data-media-type="image" data-media-id="56700353839436" ><img src="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img2_7d72b6af-35c7-4427-8f15-843f227d977b.webp?v=1771634981&amp;width=1200" alt="Oreiller Soya 2.0" srcset="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img2_7d72b6af-35c7-4427-8f15-843f227d977b.webp?v=1771634981&amp;width=200 200w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img2_7d72b6af-35c7-4427-8f15-843f227d977b.webp?v=1771634981&amp;width=300 300w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img2_7d72b6af-35c7-4427-8f15-843f227d977b.webp?v=1771634981&amp;width=400 400w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img2_7d72b6af-35c7-4427-8f15-843f227d977b.webp?v=1771634981&amp;width=500 500w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img2_7d72b6af-35c7-4427-8f15-843f227d977b.webp?v=1771634981&amp;width=600 600w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img2_7d72b6af-35c7-4427-8f15-843f227d977b.webp?v=1771634981&amp;width=700 700w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img2_7d72b6af-35c7-4427-8f15-843f227d977b.webp?v=1771634981&amp;width=800 800w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img2_7d72b6af-35c7-4427-8f15-843f227d977b.webp?v=1771634981&amp;width=1000 1000w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img2_7d72b6af-35c7-4427-8f15-843f227d977b.webp?v=1771634981&amp;width=1200 1200w" width="1200" height="1200" loading="lazy" fetchpriority="auto" sizes="(max-width: 740px) calc(100vw - 40px), (max-width: 999px) calc(100vw - 64px), min(730px, 40vw)" class="rounded"></div><div class="product-gallery__media  snap-center" data-media-type="image" data-media-id="56700353741132" ><img src="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img3_5f834f33-5e47-49e1-a6a1-34e17f3341b1.webp?v=1771634981&amp;width=1200" alt="Oreiller Soya 2.0" srcset="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img3_5f834f33-5e47-49e1-a6a1-34e17f3341b1.webp?v=1771634981&amp;width=200 200w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img3_5f834f33-5e47-49e1-a6a1-34e17f3341b1.webp?v=1771634981&amp;width=300 300w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img3_5f834f33-5e47-49e1-a6a1-34e17f3341b1.webp?v=1771634981&amp;width=400 400w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img3_5f834f33-5e47-49e1-a6a1-34e17f3341b1.webp?v=1771634981&amp;width=500 500w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img3_5f834f33-5e47-49e1-a6a1-34e17f3341b1.webp?v=1771634981&amp;width=600 600w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img3_5f834f33-5e47-49e1-a6a1-34e17f3341b1.webp?v=1771634981&amp;width=700 700w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img3_5f834f33-5e47-49e1-a6a1-34e17f3341b1.webp?v=1771634981&amp;width=800 800w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img3_5f834f33-5e47-49e1-a6a1-34e17f3341b1.webp?v=1771634981&amp;width=1000 1000w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img3_5f834f33-5e47-49e1-a6a1-34e17f3341b1.webp?v=1771634981&amp;width=1200 1200w" width="1200" height="1200" loading="lazy" fetchpriority="auto" sizes="(max-width: 740px) calc(100vw - 40px), (max-width: 999px) calc(100vw - 64px), min(730px, 40vw)" class="rounded"></div><div class="product-gallery__media  snap-center" data-media-type="image" data-media-id="56700353773900" ><img src="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img4_39d31902-82e0-42b3-a8cb-6b71e2ebfe7a.webp?v=1771634981&amp;width=1200" alt="Oreiller Soya 2.0" srcset="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img4_39d31902-82e0-42b3-a8cb-6b71e2ebfe7a.webp?v=1771634981&amp;width=200 200w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img4_39d31902-82e0-42b3-a8cb-6b71e2ebfe7a.webp?v=1771634981&amp;width=300 300w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img4_39d31902-82e0-42b3-a8cb-6b71e2ebfe7a.webp?v=1771634981&amp;width=400 400w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img4_39d31902-82e0-42b3-a8cb-6b71e2ebfe7a.webp?v=1771634981&amp;width=500 500w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img4_39d31902-82e0-42b3-a8cb-6b71e2ebfe7a.webp?v=1771634981&amp;width=600 600w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img4_39d31902-82e0-42b3-a8cb-6b71e2ebfe7a.webp?v=1771634981&amp;width=700 700w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img4_39d31902-82e0-42b3-a8cb-6b71e2ebfe7a.webp?v=1771634981&amp;width=800 800w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img4_39d31902-82e0-42b3-a8cb-6b71e2ebfe7a.webp?v=1771634981&amp;width=1000 1000w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img4_39d31902-82e0-42b3-a8cb-6b71e2ebfe7a.webp?v=1771634981&amp;width=1200 1200w" width="1200" height="1200" loading="lazy" fetchpriority="auto" sizes="(max-width: 740px) calc(100vw - 40px), (max-width: 999px) calc(100vw - 64px), min(730px, 40vw)" class="rounded"></div><div class="product-gallery__media  snap-center" data-media-type="image" data-media-id="56700353806668" ><img src="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img5_a8a3199e-0071-4043-a899-f89baff52945.webp?v=1771634981&amp;width=1200" alt="Oreiller Soya 2.0" srcset="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img5_a8a3199e-0071-4043-a899-f89baff52945.webp?v=1771634981&amp;width=200 200w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img5_a8a3199e-0071-4043-a899-f89baff52945.webp?v=1771634981&amp;width=300 300w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img5_a8a3199e-0071-4043-a899-f89baff52945.webp?v=1771634981&amp;width=400 400w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img5_a8a3199e-0071-4043-a899-f89baff52945.webp?v=1771634981&amp;width=500 500w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img5_a8a3199e-0071-4043-a899-f89baff52945.webp?v=1771634981&amp;width=600 600w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img5_a8a3199e-0071-4043-a899-f89baff52945.webp?v=1771634981&amp;width=700 700w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img5_a8a3199e-0071-4043-a899-f89baff52945.webp?v=1771634981&amp;width=800 800w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img5_a8a3199e-0071-4043-a899-f89baff52945.webp?v=1771634981&amp;width=1000 1000w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img5_a8a3199e-0071-4043-a899-f89baff52945.webp?v=1771634981&amp;width=1200 1200w" width="1200" height="1200" loading="lazy" fetchpriority="auto" sizes="(max-width: 740px) calc(100vw - 40px), (max-width: 999px) calc(100vw - 64px), min(730px, 40vw)" class="rounded"></div><div class="product-gallery__media  snap-center" data-media-type="image" data-media-id="56700355674444" ><img src="//soya-paris.com/cdn/shop/files/Oreiller_position_4.png?v=1771634981&amp;width=1200" alt="Oreiller Soya 2.0" srcset="//soya-paris.com/cdn/shop/files/Oreiller_position_4.png?v=1771634981&amp;width=200 200w, //soya-paris.com/cdn/shop/files/Oreiller_position_4.png?v=1771634981&amp;width=300 300w, //soya-paris.com/cdn/shop/files/Oreiller_position_4.png?v=1771634981&amp;width=400 400w, //soya-paris.com/cdn/shop/files/Oreiller_position_4.png?v=1771634981&amp;width=500 500w, //soya-paris.com/cdn/shop/files/Oreiller_position_4.png?v=1771634981&amp;width=600 600w, //soya-paris.com/cdn/shop/files/Oreiller_position_4.png?v=1771634981&amp;width=700 700w, //soya-paris.com/cdn/shop/files/Oreiller_position_4.png?v=1771634981&amp;width=800 800w, //soya-paris.com/cdn/shop/files/Oreiller_position_4.png?v=1771634981&amp;width=1000 1000w, //soya-paris.com/cdn/shop/files/Oreiller_position_4.png?v=1771634981&amp;width=1200 1200w" width="1200" height="1200" loading="lazy" fetchpriority="auto" sizes="(max-width: 740px) calc(100vw - 40px), (max-width: 999px) calc(100vw - 64px), min(730px, 40vw)" class="rounded"></div><div class="product-gallery__media  snap-center" data-media-type="image" data-media-id="56700353904972" ><img src="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img6_9601dd3b-66d6-4311-b41e-5fd7712bdc15.webp?v=1771634981&amp;width=1200" alt="Oreiller Soya 2.0" srcset="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img6_9601dd3b-66d6-4311-b41e-5fd7712bdc15.webp?v=1771634981&amp;width=200 200w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img6_9601dd3b-66d6-4311-b41e-5fd7712bdc15.webp?v=1771634981&amp;width=300 300w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img6_9601dd3b-66d6-4311-b41e-5fd7712bdc15.webp?v=1771634981&amp;width=400 400w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img6_9601dd3b-66d6-4311-b41e-5fd7712bdc15.webp?v=1771634981&amp;width=500 500w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img6_9601dd3b-66d6-4311-b41e-5fd7712bdc15.webp?v=1771634981&amp;width=600 600w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img6_9601dd3b-66d6-4311-b41e-5fd7712bdc15.webp?v=1771634981&amp;width=700 700w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img6_9601dd3b-66d6-4311-b41e-5fd7712bdc15.webp?v=1771634981&amp;width=800 800w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img6_9601dd3b-66d6-4311-b41e-5fd7712bdc15.webp?v=1771634981&amp;width=1000 1000w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img6_9601dd3b-66d6-4311-b41e-5fd7712bdc15.webp?v=1771634981&amp;width=1200 1200w" width="1200" height="1200" loading="lazy" fetchpriority="auto" sizes="(max-width: 740px) calc(100vw - 40px), (max-width: 999px) calc(100vw - 64px), min(730px, 40vw)" class="rounded"></div><div class="product-gallery__media  snap-center" data-media-type="image" data-media-id="56700353872204" ><img src="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img7_43909438-1603-4e59-add4-f987f4acd789.webp?v=1771634981&amp;width=1200" alt="Oreiller Soya 2.0" srcset="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img7_43909438-1603-4e59-add4-f987f4acd789.webp?v=1771634981&amp;width=200 200w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img7_43909438-1603-4e59-add4-f987f4acd789.webp?v=1771634981&amp;width=300 300w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img7_43909438-1603-4e59-add4-f987f4acd789.webp?v=1771634981&amp;width=400 400w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img7_43909438-1603-4e59-add4-f987f4acd789.webp?v=1771634981&amp;width=500 500w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img7_43909438-1603-4e59-add4-f987f4acd789.webp?v=1771634981&amp;width=600 600w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img7_43909438-1603-4e59-add4-f987f4acd789.webp?v=1771634981&amp;width=700 700w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img7_43909438-1603-4e59-add4-f987f4acd789.webp?v=1771634981&amp;width=800 800w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img7_43909438-1603-4e59-add4-f987f4acd789.webp?v=1771634981&amp;width=1000 1000w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img7_43909438-1603-4e59-add4-f987f4acd789.webp?v=1771634981&amp;width=1200 1200w" width="1200" height="1200" loading="lazy" fetchpriority="auto" sizes="(max-width: 740px) calc(100vw - 40px), (max-width: 999px) calc(100vw - 64px), min(730px, 40vw)" class="rounded"></div><div class="product-gallery__media  snap-center" data-media-type="image" data-media-id="56700369273164" ><img src="//soya-paris.com/cdn/shop/files/11_bf88b3df-377c-4ddb-b78a-cc7a164e7755.png?v=1771634981&amp;width=1654" alt="Oreiller Soya 2.0" srcset="//soya-paris.com/cdn/shop/files/11_bf88b3df-377c-4ddb-b78a-cc7a164e7755.png?v=1771634981&amp;width=200 200w, //soya-paris.com/cdn/shop/files/11_bf88b3df-377c-4ddb-b78a-cc7a164e7755.png?v=1771634981&amp;width=300 300w, //soya-paris.com/cdn/shop/files/11_bf88b3df-377c-4ddb-b78a-cc7a164e7755.png?v=1771634981&amp;width=400 400w, //soya-paris.com/cdn/shop/files/11_bf88b3df-377c-4ddb-b78a-cc7a164e7755.png?v=1771634981&amp;width=500 500w, //soya-paris.com/cdn/shop/files/11_bf88b3df-377c-4ddb-b78a-cc7a164e7755.png?v=1771634981&amp;width=600 600w, //soya-paris.com/cdn/shop/files/11_bf88b3df-377c-4ddb-b78a-cc7a164e7755.png?v=1771634981&amp;width=700 700w, //soya-paris.com/cdn/shop/files/11_bf88b3df-377c-4ddb-b78a-cc7a164e7755.png?v=1771634981&amp;width=800 800w, //soya-paris.com/cdn/shop/files/11_bf88b3df-377c-4ddb-b78a-cc7a164e7755.png?v=1771634981&amp;width=1000 1000w, //soya-paris.com/cdn/shop/files/11_bf88b3df-377c-4ddb-b78a-cc7a164e7755.png?v=1771634981&amp;width=1200 1200w, //soya-paris.com/cdn/shop/files/11_bf88b3df-377c-4ddb-b78a-cc7a164e7755.png?v=1771634981&amp;width=1400 1400w, //soya-paris.com/cdn/shop/files/11_bf88b3df-377c-4ddb-b78a-cc7a164e7755.png?v=1771634981&amp;width=1600 1600w" width="1654" height="1654" loading="lazy" fetchpriority="auto" sizes="(max-width: 740px) calc(100vw - 40px), (max-width: 999px) calc(100vw - 64px), min(730px, 40vw)" class="rounded"></div></media-carousel></div></div><scroll-shadow class="product-gallery__thumbnail-list-wrapper">
+        <page-dots align-selected class="product-gallery__thumbnail-list scroll-area bleed md:unbleed" aria-controls="product-gallery-15152183443788-template--30066190483788__main"><button type="button" class="product-gallery__thumbnail"  aria-current="true" aria-label="Aller à l&amp;#39;élément 1"><img src="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0HD.webp?v=1771634981&amp;width=1200" alt="Oreiller Soya 2.0" srcset="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0HD.webp?v=1771634981&amp;width=56 56w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0HD.webp?v=1771634981&amp;width=64 64w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0HD.webp?v=1771634981&amp;width=112 112w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0HD.webp?v=1771634981&amp;width=128 128w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0HD.webp?v=1771634981&amp;width=168 168w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0HD.webp?v=1771634981&amp;width=192 192w" width="1200" height="1200" loading="lazy" sizes="(max-width: 699px) 56px, 64px" class="object-contain rounded-sm">
+            </button><button type="button" class="product-gallery__thumbnail"  aria-current="false" aria-label="Aller à l&amp;#39;élément 2"><img src="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img2_7d72b6af-35c7-4427-8f15-843f227d977b.webp?v=1771634981&amp;width=1200" alt="Oreiller Soya 2.0" srcset="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img2_7d72b6af-35c7-4427-8f15-843f227d977b.webp?v=1771634981&amp;width=56 56w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img2_7d72b6af-35c7-4427-8f15-843f227d977b.webp?v=1771634981&amp;width=64 64w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img2_7d72b6af-35c7-4427-8f15-843f227d977b.webp?v=1771634981&amp;width=112 112w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img2_7d72b6af-35c7-4427-8f15-843f227d977b.webp?v=1771634981&amp;width=128 128w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img2_7d72b6af-35c7-4427-8f15-843f227d977b.webp?v=1771634981&amp;width=168 168w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img2_7d72b6af-35c7-4427-8f15-843f227d977b.webp?v=1771634981&amp;width=192 192w" width="1200" height="1200" loading="lazy" sizes="(max-width: 699px) 56px, 64px" class="object-contain rounded-sm">
+            </button><button type="button" class="product-gallery__thumbnail"  aria-current="false" aria-label="Aller à l&amp;#39;élément 3"><img src="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img3_5f834f33-5e47-49e1-a6a1-34e17f3341b1.webp?v=1771634981&amp;width=1200" alt="Oreiller Soya 2.0" srcset="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img3_5f834f33-5e47-49e1-a6a1-34e17f3341b1.webp?v=1771634981&amp;width=56 56w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img3_5f834f33-5e47-49e1-a6a1-34e17f3341b1.webp?v=1771634981&amp;width=64 64w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img3_5f834f33-5e47-49e1-a6a1-34e17f3341b1.webp?v=1771634981&amp;width=112 112w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img3_5f834f33-5e47-49e1-a6a1-34e17f3341b1.webp?v=1771634981&amp;width=128 128w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img3_5f834f33-5e47-49e1-a6a1-34e17f3341b1.webp?v=1771634981&amp;width=168 168w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img3_5f834f33-5e47-49e1-a6a1-34e17f3341b1.webp?v=1771634981&amp;width=192 192w" width="1200" height="1200" loading="lazy" sizes="(max-width: 699px) 56px, 64px" class="object-contain rounded-sm">
+            </button><button type="button" class="product-gallery__thumbnail"  aria-current="false" aria-label="Aller à l&amp;#39;élément 4"><img src="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img4_39d31902-82e0-42b3-a8cb-6b71e2ebfe7a.webp?v=1771634981&amp;width=1200" alt="Oreiller Soya 2.0" srcset="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img4_39d31902-82e0-42b3-a8cb-6b71e2ebfe7a.webp?v=1771634981&amp;width=56 56w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img4_39d31902-82e0-42b3-a8cb-6b71e2ebfe7a.webp?v=1771634981&amp;width=64 64w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img4_39d31902-82e0-42b3-a8cb-6b71e2ebfe7a.webp?v=1771634981&amp;width=112 112w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img4_39d31902-82e0-42b3-a8cb-6b71e2ebfe7a.webp?v=1771634981&amp;width=128 128w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img4_39d31902-82e0-42b3-a8cb-6b71e2ebfe7a.webp?v=1771634981&amp;width=168 168w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img4_39d31902-82e0-42b3-a8cb-6b71e2ebfe7a.webp?v=1771634981&amp;width=192 192w" width="1200" height="1200" loading="lazy" sizes="(max-width: 699px) 56px, 64px" class="object-contain rounded-sm">
+            </button><button type="button" class="product-gallery__thumbnail"  aria-current="false" aria-label="Aller à l&amp;#39;élément 5"><img src="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img5_a8a3199e-0071-4043-a899-f89baff52945.webp?v=1771634981&amp;width=1200" alt="Oreiller Soya 2.0" srcset="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img5_a8a3199e-0071-4043-a899-f89baff52945.webp?v=1771634981&amp;width=56 56w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img5_a8a3199e-0071-4043-a899-f89baff52945.webp?v=1771634981&amp;width=64 64w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img5_a8a3199e-0071-4043-a899-f89baff52945.webp?v=1771634981&amp;width=112 112w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img5_a8a3199e-0071-4043-a899-f89baff52945.webp?v=1771634981&amp;width=128 128w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img5_a8a3199e-0071-4043-a899-f89baff52945.webp?v=1771634981&amp;width=168 168w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img5_a8a3199e-0071-4043-a899-f89baff52945.webp?v=1771634981&amp;width=192 192w" width="1200" height="1200" loading="lazy" sizes="(max-width: 699px) 56px, 64px" class="object-contain rounded-sm">
+            </button><button type="button" class="product-gallery__thumbnail"  aria-current="false" aria-label="Aller à l&amp;#39;élément 6"><img src="//soya-paris.com/cdn/shop/files/Oreiller_position_4.png?v=1771634981&amp;width=1200" alt="Oreiller Soya 2.0" srcset="//soya-paris.com/cdn/shop/files/Oreiller_position_4.png?v=1771634981&amp;width=56 56w, //soya-paris.com/cdn/shop/files/Oreiller_position_4.png?v=1771634981&amp;width=64 64w, //soya-paris.com/cdn/shop/files/Oreiller_position_4.png?v=1771634981&amp;width=112 112w, //soya-paris.com/cdn/shop/files/Oreiller_position_4.png?v=1771634981&amp;width=128 128w, //soya-paris.com/cdn/shop/files/Oreiller_position_4.png?v=1771634981&amp;width=168 168w, //soya-paris.com/cdn/shop/files/Oreiller_position_4.png?v=1771634981&amp;width=192 192w" width="1200" height="1200" loading="lazy" sizes="(max-width: 699px) 56px, 64px" class="object-contain rounded-sm">
+            </button><button type="button" class="product-gallery__thumbnail"  aria-current="false" aria-label="Aller à l&amp;#39;élément 7"><img src="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img6_9601dd3b-66d6-4311-b41e-5fd7712bdc15.webp?v=1771634981&amp;width=1200" alt="Oreiller Soya 2.0" srcset="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img6_9601dd3b-66d6-4311-b41e-5fd7712bdc15.webp?v=1771634981&amp;width=56 56w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img6_9601dd3b-66d6-4311-b41e-5fd7712bdc15.webp?v=1771634981&amp;width=64 64w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img6_9601dd3b-66d6-4311-b41e-5fd7712bdc15.webp?v=1771634981&amp;width=112 112w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img6_9601dd3b-66d6-4311-b41e-5fd7712bdc15.webp?v=1771634981&amp;width=128 128w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img6_9601dd3b-66d6-4311-b41e-5fd7712bdc15.webp?v=1771634981&amp;width=168 168w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img6_9601dd3b-66d6-4311-b41e-5fd7712bdc15.webp?v=1771634981&amp;width=192 192w" width="1200" height="1200" loading="lazy" sizes="(max-width: 699px) 56px, 64px" class="object-contain rounded-sm">
+            </button><button type="button" class="product-gallery__thumbnail"  aria-current="false" aria-label="Aller à l&amp;#39;élément 8"><img src="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img7_43909438-1603-4e59-add4-f987f4acd789.webp?v=1771634981&amp;width=1200" alt="Oreiller Soya 2.0" srcset="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img7_43909438-1603-4e59-add4-f987f4acd789.webp?v=1771634981&amp;width=56 56w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img7_43909438-1603-4e59-add4-f987f4acd789.webp?v=1771634981&amp;width=64 64w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img7_43909438-1603-4e59-add4-f987f4acd789.webp?v=1771634981&amp;width=112 112w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img7_43909438-1603-4e59-add4-f987f4acd789.webp?v=1771634981&amp;width=128 128w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img7_43909438-1603-4e59-add4-f987f4acd789.webp?v=1771634981&amp;width=168 168w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0_img7_43909438-1603-4e59-add4-f987f4acd789.webp?v=1771634981&amp;width=192 192w" width="1200" height="1200" loading="lazy" sizes="(max-width: 699px) 56px, 64px" class="object-contain rounded-sm">
+            </button><button type="button" class="product-gallery__thumbnail"  aria-current="false" aria-label="Aller à l&amp;#39;élément 9"><img src="//soya-paris.com/cdn/shop/files/11_bf88b3df-377c-4ddb-b78a-cc7a164e7755.png?v=1771634981&amp;width=1654" alt="Oreiller Soya 2.0" srcset="//soya-paris.com/cdn/shop/files/11_bf88b3df-377c-4ddb-b78a-cc7a164e7755.png?v=1771634981&amp;width=56 56w, //soya-paris.com/cdn/shop/files/11_bf88b3df-377c-4ddb-b78a-cc7a164e7755.png?v=1771634981&amp;width=64 64w, //soya-paris.com/cdn/shop/files/11_bf88b3df-377c-4ddb-b78a-cc7a164e7755.png?v=1771634981&amp;width=112 112w, //soya-paris.com/cdn/shop/files/11_bf88b3df-377c-4ddb-b78a-cc7a164e7755.png?v=1771634981&amp;width=128 128w, //soya-paris.com/cdn/shop/files/11_bf88b3df-377c-4ddb-b78a-cc7a164e7755.png?v=1771634981&amp;width=168 168w, //soya-paris.com/cdn/shop/files/11_bf88b3df-377c-4ddb-b78a-cc7a164e7755.png?v=1771634981&amp;width=192 192w" width="1654" height="1654" loading="lazy" sizes="(max-width: 699px) 56px, 64px" class="object-contain rounded-sm">
+            </button></page-dots>
+      </scroll-shadow></product-gallery><safe-sticky class="product-info"><div class="product-info__block-item" data-block-id="liquid_n8MKt3" data-block-type="liquid" ><div class="product-info__liquid">
+              <div style="display: flex; align-items: center; text-align: left; margin-bottom: 0;">
+  <!-- Étoiles jaunes -->
+  <img src="https://img.icons8.com/?size=100&id=zWBbi62CYIKH&format=png&color=FFD700" alt="Star" style="height: 14px; margin-right: 2px;">
+  <img src="https://img.icons8.com/?size=100&id=zWBbi62CYIKH&format=png&color=FFD700" alt="Star" style="height: 14px; margin-right: 2px;">
+  <img src="https://img.icons8.com/?size=100&id=zWBbi62CYIKH&format=png&color=FFD700" alt="Star" style="height: 14px; margin-right: 2px;">
+  <img src="https://img.icons8.com/?size=100&id=zWBbi62CYIKH&format=png&color=FFD700" alt="Star" style="height: 14px; margin-right: 2px;">
+  <img src="https://img.icons8.com/?size=100&id=zWBbi62CYIKH&format=png&color=FFD700" alt="Star" style="height: 14px; margin-right: 10px;">
+
+  <!-- Texte multilingue -->
+  <div style="margin-bottom: 0px;">
+    
+      <span style="font-weight: bold;">Noté 4,8/5</span> – 15 637 avis clients
+    
+  </div>
+</div>
+
+<!-- Texte supplémentaire -->
+<div style="margin-top: 5px; font-size: 14px; color: #636366; text-transform: uppercase;">
+  
+    NOTRE BEST-SELLER — L’OREILLER ORTHOPÉDIQUE CONÇU AVEC DES PRATICIENS
+  
+</div>
+            </div></div><div class="product-info__block-item" data-block-id="title" data-block-type="title" ><h2 class="product-info__title h3">
+              <a href="/products/oreiller-soya-2-0">Oreiller Soya 2.0</a>
+            </h2></div><div class="product-info__block-item" data-block-id="liquid_AeC4XT" data-block-type="liquid" ><div class="product-info__liquid">
+              <style>
+  .soya-benefits {
+    padding: 0px 10px;
+  }
+
+  .soya-benefits ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .soya-benefits li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #1A1A1A;
+  }
+
+  .soya-benefits li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #0074E6;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  @media (max-width: 768px) {
+    .soya-benefits li {
+      font-size: 14px;
+    }
+  }
+</style>
+
+<div class="soya-benefits">
+  
+    <ul>
+      <li>Soutien cervical ergonomique validé par ostéopathes</li>
+      <li>Réduction des douleurs au cou, au dos et aux épaules</li>
+      <li>Amélioration prouvée de la posture et du sommeil</li>
+    </ul>
+  
+</div>
+            </div></div><div class="product-info__block-item" data-block-id="liquid_bmiegj" data-block-type="liquid" ><div class="product-info__liquid">
+              <!-- STORIES SOYA (teaser 5s) -->
+<div class="soya-stories-strip-wrapper">
+  <div class="soya-stories-strip">
+    <!-- 1. Concept -->
+    <button class="soya-story" data-video="https://cdn.shopify.com/videos/c/o/v/2abd48ac2db24d558d8bd23a1a624faf.mp4">
+      <div class="soya-story-thumb">
+        <video
+          class="soya-thumb-video"
+          src="https://cdn.shopify.com/videos/c/o/v/2abd48ac2db24d558d8bd23a1a624faf.mp4"
+          muted
+          playsinline
+        ></video>
+        <span class="soya-story-play"></span>
+      </div>
+      <span class="soya-story-label">Concept</span>
+    </button>
+
+    <!-- 2. Conseils sommeil -->
+    <button class="soya-story" data-video="https://cdn.shopify.com/videos/c/o/v/701a0a7633a243da91767f97caabe003.mp4">
+      <div class="soya-story-thumb">
+        <video
+          class="soya-thumb-video"
+          src="https://cdn.shopify.com/videos/c/o/v/701a0a7633a243da91767f97caabe003.mp4"
+          muted
+          playsinline
+        ></video>
+        <span class="soya-story-play"></span>
+      </div>
+      <span class="soya-story-label">Conseils sommeil</span>
+    </button>
+
+    <!-- 3. Avis clients -->
+    <button class="soya-story" data-video="https://cdn.shopify.com/videos/c/o/v/30bb3fea1ff54892a54a5de8c1e53475.mp4">
+      <div class="soya-story-thumb">
+        <video
+          class="soya-thumb-video"
+          src="https://cdn.shopify.com/videos/c/o/v/30bb3fea1ff54892a54a5de8c1e53475.mp4"
+          muted
+          playsinline
+        ></video>
+        <span class="soya-story-play"></span>
+      </div>
+      <span class="soya-story-label">Avis clients</span>
+    </button>
+
+    <!-- 4. FAQ -->
+    <button class="soya-story" data-video="https://cdn.shopify.com/videos/c/o/v/a5bf0f90dc2a4dde895284be28b2bc30.mp4">
+      <div class="soya-story-thumb">
+        <video
+          class="soya-thumb-video"
+          src="https://cdn.shopify.com/videos/c/o/v/a5bf0f90dc2a4dde895284be28b2bc30.mp4"
+          muted
+          playsinline
+        ></video>
+        <span class="soya-story-play"></span>
+      </div>
+      <span class="soya-story-label">FAQ</span>
+    </button>
+  </div>
+</div>
+
+<!-- MODALE -->
+<div class="soya-story-modal" id="soyaStoryModal">
+  <div class="soya-story-overlay"></div>
+  <div class="soya-story-box">
+    <button class="soya-story-close" aria-label="Fermer">×</button>
+    <video id="soyaStoryVideo" controls playsinline>
+      <source src="" type="video/mp4">
+      Votre navigateur ne supporte pas la vidéo.
+    </video>
+  </div>
+</div>
+
+<style>
+  .soya-stories-strip-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow-x: auto;
+  }
+  .soya-stories-strip {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    padding: .5rem 0 1rem;
+  }
+  .soya-story {
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .4rem;
+  }
+  .soya-story-thumb {
+    width: 78px;
+    height: 78px;
+    border-radius: 999px;
+    border: 3px solid #0f2844;
+    position: relative;
+    overflow: hidden;
+    background: #e9edf2;
+  }
+  .soya-story-thumb video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .soya-story-play {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border: 2px solid #0f2844;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+  }
+  .soya-story-play::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 8px solid #0f2844;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+  }
+  .soya-story-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 34px;
+    max-width: 90px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.1;
+    color: #0f2844;
+  }
+  .soya-story-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  .soya-story-modal.active {
+    display: flex;
+  }
+  .soya-story-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+  }
+  .soya-story-box {
+    position: relative;
+    background: #fff;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 430px;
+    padding: 16px 16px 20px;
+    z-index: 2;
+  }
+  .soya-story-box video {
+    width: 100%;
+    border-radius: 12px;
+  }
+  .soya-story-close {
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    background: #fff;
+    border: 2px solid #0f2844;
+    color: #0f2844;
+    font-size: 20px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 3;
+  }
+  @media (max-width: 640px) {
+    .soya-story-box {
+      max-width: 360px;
+    }
+    .soya-story-close {
+      top: -12px;
+      right: -12px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('soyaStoryModal');
+    const video = document.getElementById('soyaStoryVideo');
+
+    // ouverture modale
+    document.querySelectorAll('.soya-story').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const src = btn.getAttribute('data-video');
+        video.querySelector('source').setAttribute('src', src);
+        video.load();
+        video.play();
+        modal.classList.add('active');
+      });
+    });
+
+    // fermeture modale
+    modal.addEventListener('click', (e) => {
+      if (
+        e.target.classList.contains('soya-story-overlay') ||
+        e.target.closest('.soya-story-close')
+      ) {
+        video.pause();
+        modal.classList.remove('active');
+      }
+    });
+
+    // MINI-TEASERS 5s
+    const thumbs = document.querySelectorAll('.soya-thumb-video');
+    thumbs.forEach(v => {
+      // certains navigateurs bloquent l'autoplay : on tente
+      v.play().then(() => {
+        // après 5s on stop et on remet au début
+        setTimeout(() => {
+          v.pause();
+          v.currentTime = 0;
+        }, 10000);
+      }).catch(() => {
+        // si l'autoplay est bloqué on fait rien
+      });
+    });
+  });
+</script>
+            </div></div><div class="product-info__block-item" data-block-id="variant_picker" data-block-type="variant-picker" ><div class="product-info__variant-picker"></div></div><div class="product-info__block-item" data-block-id="buy_buttons" data-block-type="buy-buttons" ><div class="product-info__buy-buttons"><form method="post" action="/cart/add" id="product-form-15152183443788-template--30066190483788__main" accept-charset="UTF-8" class="shopify-product-form" enctype="multipart/form-data" is="product-form"><input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" disabled name="id" value="53641794158924"><div class="v-stack gap-4"><buy-buttons class="buy-buttons " template="oreiller-soya-2-0" form="product-form-15152183443788-template--30066190483788__main">
+<button type="submit" class="button button--xl"
+  
+  
+  
+  
+  
+  
+  
+  is="custom-button"
+ >Ajouter au panier</button></buy-buttons>
+  </div><input type="hidden" name="product-id" value="15152183443788" /><input type="hidden" name="section-id" value="template--30066190483788__main" /></form></div></div><div class="product-info__block-item" data-block-id="liquid_JwXkcr" data-block-type="liquid" ><div class="product-info__liquid">
+              <style>
+  .custom-stock-text {
+    font-size: 14px;
+    color: #0D67E7; /* Bleu SOYA */
+    text-align: center;
+    display: block;
+    margin-top: 0; /* supprime l'espace au-dessus */
+  }
+
+  .custom-alert-stock {
+    font-size: 14px;
+    color: #E53935; /* Rouge d’urgence */
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 4px;
+    display: block;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .custom-stock-text,
+    .custom-alert-stock {
+      font-size: 14px;
+    }
+  }
+</style>
+
+<span class="custom-alert-stock">
+  Plus que quelques exemplaires en stock
+</span>
+
+<span class="custom-stock-text">
+  
+    30 nuits d’essai — Satisfait ou remboursé
+  
+</span>
+            </div></div><div class="product-info__block-item" data-block-id="liquid_WFwcx8" data-block-type="liquid" ><div class="product-info__liquid">
+              <style>
+    .secure-pay-image {
+        width: 100%;
+        margin-top: -10px;
+        margin-bottom: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<img class="secure-pay-image" src="https://cdn.shopify.com/s/files/1/0935/5054/3180/files/soya-payments.svg?v=1760867196" alt="Secure Pay Image">
+            </div></div><div class="product-info__block-item" data-block-id="liquid_JrVWqc" data-block-type="liquid" ><div class="product-info__liquid">
+              <div style="border: 1px solid #e1e1e1; padding: 12px; border-radius: 10px; max-width: 1200px; background-color: #f8f8f8; margin: 0 auto;">
+  <div style="text-align:center; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; color:#1A1A1A;">
+    
+    <!-- Titre -->
+    <h2 style="margin:8px 0 4px 0; font-size:28px; line-height:1.2; font-weight:800;">
+      
+        FÊTE DES MÈRES <span style="white-space:nowrap;">JUSQU’À -50%</span>
+      
+    </h2>
+
+    <!-- Sous-titre -->
+    <p style="margin:0 0 6px 0; font-size:16px; font-weight:700;">
+      
+        La meilleure offre de l’année
+      
+    </p>
+
+    <!-- Sous-sous-titre -->
+    <p style="margin:0; font-size:12px; font-style:italic; color:#444;">
+      
+        Offre spéciale Fête des Mères valable dans la limite des stocks disponibles.
+      
+    </p>
+  </div>
+
+  <!-- Barre de stock -->
+  <div style="margin-top: 16px; text-align:center; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;">
+    <p style="font-size:14px; font-weight:700; color:#D94343; margin:0 0 6px 0;">
+      
+        78% du stock déjà écoulé
+      
+    </p>
+    <div style="height:12px; width:100%; max-width:700px; margin:0 auto; background:#d0d0d0; border-radius:8px; overflow:hidden;">
+      <div style="width:78%; height:100%; background:linear-gradient(90deg,#E67C7C,#D94343,#B43131);"></div>
+    </div>
+    <p style="font-size:12px; color:#555; margin-top:6px;">
+      
+        Dernière mise à jour : il y a quelques secondes.
+      
+    </p>
+  </div>
+</div>
+            </div></div><div class="product-info__block-item" data-block-id="separator" data-block-type="separator" ><hr class="product-info__separator"></div><div class="product-info__block-item" data-block-id="liquid_3Gcd4r" data-block-type="liquid" ><div class="product-info__liquid">
+              <div id="product-description-pdp" class="product-description-pdp" style="border: 1px solid #EAEAEA; padding: 20px; border-radius: 10px; max-width: 600px; background-color: #f8f8f8;">
+  
+    <h6 style="font-weight: bold; font-size: 18px; margin-bottom: 10px;">Transformez vos nuits avec l’Oreiller Soya 2.0</h6>
+    <p style="color: #636366; font-size: 14px; line-height: 1.5; margin-bottom: 20px;">
+      L’oreiller ergonomique pensé pour aligner votre corps, soulager vos douleurs et vous offrir enfin un vrai sommeil réparateur.
+    </p>
+  
+
+  <ul role="list" class="list" style="padding-left: 0; list-style-type: none; margin: 0;">
+    <li style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-right: 10px;">
+        <circle cx="12" cy="12" r="10" fill="#0074E6" stroke="#0074E6" stroke-width="2"></circle>
+        <path d="M8 13L10.5 15.5L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+      <div style="flex: 1;">
+        
+          <strong style="font-size: 14px;">Réveil sans douleur</strong>
+          <p style="color: #636366; font-size: 14px; line-height: 1.5; margin: 5px 0 0 0;">
+            Dès les premières nuits, les tensions disparaissent. La mousse à mémoire de forme épouse vos courbes et soulage cou, nuque et trapèzes — pour un réveil léger, sans raideur.
+          </p>
+        
+      </div>
+    </li>
+
+    <li style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-right: 10px;">
+        <circle cx="12" cy="12" r="10" fill="#0074E6" stroke="#0074E6" stroke-width="2"></circle>
+        <path d="M8 13L10.5 15.5L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+      <div style="flex: 1;">
+        
+          <strong style="font-size: 14px;">Alignement orthopédique validé</strong>
+          <p style="color: #636366; font-size: 14px; line-height: 1.5; margin: 5px 0 0 0;">
+            Sa forme unique en “papillon” suit la courbe naturelle de votre colonne vertébrale. Résultat : meilleure posture, moins de douleurs, confort optimisé dans toutes les positions.
+          </p>
+        
+      </div>
+    </li>
+
+    <li style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-right: 10px;">
+        <circle cx="12" cy="12" r="10" fill="#0074E6" stroke="#0074E6" stroke-width="2"></circle>
+        <path d="M8 13L10.5 15.5L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+      <div style="flex: 1;">
+        
+          <strong style="font-size: 14px;">Fraîcheur & hygiène maximale</strong>
+          <p style="color: #636366; font-size: 14px; line-height: 1.5; margin: 5px 0 0 0;">
+            Sa housse respirante enrichie en ions d’argent garde votre oreiller frais, propre et hypoallergénique toute la nuit.
+          </p>
+        
+      </div>
+    </li>
+
+    <li style="display: flex; align-items: flex-start; margin-bottom: 0;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-right: 10px;">
+        <circle cx="12" cy="12" r="10" fill="#0074E6" stroke="#0074E6" stroke-width="2"></circle>
+        <path d="M8 13L10.5 15.5L16 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+      <div style="flex: 1;">
+        
+          <strong style="font-size: 14px;">Confort sur-mesure</strong>
+          <p style="color: #636366; font-size: 14px; line-height: 1.5; margin: 5px 0 0 0;">
+            Adapté à toutes les morphologies, il soutient parfaitement la tête, les cervicales et les bras, même en mouvement.
+          </p>
+        
+      </div>
+    </li>
+  </ul>
+
+  
+    <p style="color: #636366; font-size: 14px; line-height: 1.5; margin-top: 20px;">
+      Plus de <strong>100 000 dormeurs</strong> ont déjà transformé leurs nuits avec l’Oreiller Soya. Pourquoi pas vous ?
+    </p>
+  
+</div>
+            </div></div><div class="product-info__block-item" data-block-id="liquid_rn8BMg" data-block-type="liquid" ><div class="product-info__liquid">
+              <div style="border: 1px solid #e1e1e1; padding: 12px; border-radius: 10px; max-width: 1200px; background-color: #f8f8f8;">
+  <div style="display: flex; align-items: center;">
+    <!-- Profile Picture -->
+    <div style="flex-shrink: 0;">
+      <img src="https://cdn.shopify.com/s/files/1/0935/5054/3180/files/87.webp?v=1760867140" alt="Profile Picture" style="border-radius: 50%; width: 60px; height: 60px; object-fit: cover;">
+    </div>
+
+    <!-- Text and Stars -->
+    <div style="margin-left: 12px;">
+      <!-- Stars -->
+      <div style="display: flex; align-items: center; margin-bottom: 6px;">
+        <img src="https://img.icons8.com/?size=100&id=zWBbi62CYIKH&format=png&color=FFD700" style="height: 14px; margin-right: 2px;">
+        <img src="https://img.icons8.com/?size=100&id=zWBbi62CYIKH&format=png&color=FFD700" style="height: 14px; margin-right: 2px;">
+        <img src="https://img.icons8.com/?size=100&id=zWBbi62CYIKH&format=png&color=FFD700" style="height: 14px; margin-right: 2px;">
+        <img src="https://img.icons8.com/?size=100&id=zWBbi62CYIKH&format=png&color=FFD700" style="height: 14px; margin-right: 2px;">
+        <img src="https://img.icons8.com/?size=100&id=zWBbi62CYIKH&format=png&color=FFD700" style="height: 14px;">
+      </div>
+
+      <!-- Citation -->
+      <p style="font-style: italic; font-size: 11px; margin: 5px 0;">
+        
+          "Je recommande l'oreiller orthopédique Soya à tous mes patients ! Il offre un soutien parfait pour la tête et le cou, améliorant la qualité du sommeil et réduisant les douleurs cervicales. Un incontournable pour un sommeil réparateur."
+        
+      </p>
+
+      <!-- Nom -->
+      <div style="display: flex; align-items: center;">
+        <img src="https://pagepilot.ai/images/checkmark.svg" alt="Verified Icon" style="width: 20px; height: 20px; margin-right: 5px;">
+        <span>Dr. Marc R., Chiropracteur</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Social Proof Full Width -->
+  <div style="margin-top: 12px; text-align: center;">
+    <p style="font-weight: 500; font-size: 12px; color: #1A1A1A; margin: 0;">
+      
+        Recommandé par plus de 200 professionnels de santé.
+      
+    </p>
+  </div>
+</div>
+            </div></div><div class="product-info__block-group accordion-group" data-group-type="accordion-group"><div class="product-info__block-item" data-block-id="collapsible_text_t3VqeM" data-block-type="collapsible-text" ><details  class="product-info__accordion accordion  group" aria-expanded="false" is="accordion-disclosure"  >
+  <summary><div class="accordion__toggle bold"><div class="text-with-icon"><span >MATÉRIAUX &amp; DIMENSIONS</span>
+        </div><span class="circle-chevron group-hover:colors group-expanded:colors group-expanded:rotate"><svg role="presentation" focusable="false" width="8" height="6" class="icon icon-chevron-bottom-small" viewBox="0 0 8 6">
+        <path d="m1 1.5 3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5"></path>
+      </svg></span>
+    </div>
+  </summary>
+
+  <div class="accordion__content"><div class="prose"><p>L’Oreiller Soya est conçu avec une mousse à mémoire de forme de haute qualité, sans produits chimiques nocifs. Hypoallergénique et durable, il assure un environnement de sommeil sain tout en maintenant son confort et son soutien au fil du temps. </p><p>Avec des dimensions de <strong>60 cm de largeur, 40 cm de longueur et 14 cm de hauteur</strong>, il est parfaitement adapté pour offrir un soutien optimal à toutes les morphologies. Profitez d’un oreiller qui allie sécurité, longévité et bien-être pour un sommeil réparateur chaque nuit.</p></div></div>
+</details></div><div class="product-info__block-item" data-block-id="collapsible_text_xwazzX" data-block-type="collapsible-text" ><details  class="product-info__accordion accordion  group" aria-expanded="false" is="accordion-disclosure"  >
+  <summary><div class="accordion__toggle bold"><div class="text-with-icon"><span >INSTRUCTIONS DE LAVAGE</span>
+        </div><span class="circle-chevron group-hover:colors group-expanded:colors group-expanded:rotate"><svg role="presentation" focusable="false" width="8" height="6" class="icon icon-chevron-bottom-small" viewBox="0 0 8 6">
+        <path d="m1 1.5 3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5"></path>
+      </svg></span>
+    </div>
+  </summary>
+
+  <div class="accordion__content"><div class="prose"><p>L’Oreiller <strong>SOYA 2.0 est enveloppé d’une housse amovible</strong>, en tissu respirant, doux et hypoallergénique.</p><p><strong>Instructions de lavage :</strong></p><p>	•	Déhoussez l’oreiller avec précaution</p><p>	•	Lavez la housse en machine à <strong>30°C</strong>, en sélectionnant le <strong>programme “lavage délicat” ou “lavage à la main”</strong></p><p>	•	<strong>Ne pas essorer (évitez la centrifugeuse)</strong></p><p>	•	Laissez sécher <strong>à l’air libre</strong></p><p>	•	Une fois sèche, <strong>repassez-la légèrement</strong> pour un rendu doux et net</p><p>Ces précautions permettent de préserver la qualité et la longévité de la housse.</p></div></div>
+</details></div><div class="product-info__block-item" data-block-id="collapsible_text_WxTYWY" data-block-type="collapsible-text" ><details  class="product-info__accordion accordion  group" aria-expanded="false" is="accordion-disclosure"  >
+  <summary><div class="accordion__toggle bold"><div class="text-with-icon"><span >LIVRAISON &amp; RETOURS</span>
+        </div><span class="circle-chevron group-hover:colors group-expanded:colors group-expanded:rotate"><svg role="presentation" focusable="false" width="8" height="6" class="icon icon-chevron-bottom-small" viewBox="0 0 8 6">
+        <path d="m1 1.5 3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5"></path>
+      </svg></span>
+    </div>
+  </summary>
+
+  <div class="accordion__content"><div class="prose"><p>Livraison gratuite pour toutes les commandes.</p><p>Veuillez prévoir les délais de livraison suivants :</p><ul><li><strong>Temps de traitement :</strong> 1 à 2 jours</li><li><strong>Livraison standard :</strong> 3 à 5 jours</li></ul><p>Essayez votre oreiller Soya pendant 30 jours. Si vous n’êtes pas entièrement satisfait, vous pouvez le retourner dans ce délai pour un remboursement complet.<br/><br/><strong>Note</strong> : Une fois reçu, laissez votre oreiller à l’air libre quelques minutes afin qu’il retrouve sa forme d’origine après avoir été compressé pour l’expédition.</p></div></div>
+</details></div><div class="product-info__block-item" data-block-id="collapsible_text_ph9GNm" data-block-type="collapsible-text" ><details  class="product-info__accordion accordion  group" aria-expanded="false" is="accordion-disclosure"  >
+  <summary><div class="accordion__toggle bold"><div class="text-with-icon"><span >GARANTIE 30 NUITS</span>
+        </div><span class="circle-chevron group-hover:colors group-expanded:colors group-expanded:rotate"><svg role="presentation" focusable="false" width="8" height="6" class="icon icon-chevron-bottom-small" viewBox="0 0 8 6">
+        <path d="m1 1.5 3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5"></path>
+      </svg></span>
+    </div>
+  </summary>
+
+  <div class="accordion__content"><div class="prose"><p>Nous sommes convaincus que vous allez adorer notre Oreiller Orthopédique Soya, mais nous comprenons que vous ne puissiez pas en être sûr maintenant. C'est pourquoi nous vous offrons une période d'essai de 30 nuits. Vous pouvez essayer, ressentir et constater par vous-même la qualité exceptionnelle de l'Oreiller Soya, sans aucun souci.<br/>Si, après 30 jours, vous n'êtes pas satisfait de votre oreiller Soya, renvoyez-le-nous pour un remboursement complet.</p></div></div>
+</details></div></div><div class="product-info__block-item" data-block-id="associated_products_EryN6q" data-block-type="associated-products" ><product-recommendations class="block" product="15152183443788" limit="5" intent="complementary"><div class="product-info__complementary-products v-stack gap-3 sm:gap-4"><div class="h-stack justify-between gap-4"><p>Complétez pour un confort ultime !</p></div><div class="horizontal-product-list border divide-y rounded-xs"><div class="horizontal-product  rounded-xs snap-start"><img src="//soya-paris.com/cdn/shop/files/2-housse_Oreiller_de_Rechange_Soya_HD.webp?v=1760852770&amp;width=1200" alt="Housse d’Oreiller de Rechange Soya 2.0" srcset="//soya-paris.com/cdn/shop/files/2-housse_Oreiller_de_Rechange_Soya_HD.webp?v=1760852770&amp;width=64 64w, //soya-paris.com/cdn/shop/files/2-housse_Oreiller_de_Rechange_Soya_HD.webp?v=1760852770&amp;width=128 128w, //soya-paris.com/cdn/shop/files/2-housse_Oreiller_de_Rechange_Soya_HD.webp?v=1760852770&amp;width=80 80w, //soya-paris.com/cdn/shop/files/2-housse_Oreiller_de_Rechange_Soya_HD.webp?v=1760852770&amp;width=160 160w" width="1200" height="1200" loading="lazy" sizes="(max-width: 740px) 64px, 80px" class="horizontal-product__image rounded-xs"><div class="horizontal-product__info">
+    <div class="v-stack gap-0.5"><a href="/products/housse-d-oreiller-de-rechange-soya-1?pr_prod_strat=pinned&pr_rec_id=8858b6cfb&pr_rec_pid=15152116433228&pr_ref_pid=15152183443788&pr_seq=uniform" data-instant class="text-sm bold">
+          <span class="reversed-link hover:show">Housse d’Oreiller de Rechange Soya 2.0</span>
+        </a><price-list class="price-list  "><sale-price class="text-on-sale text-sm">
+        <span class="sr-only">Prix de vente</span>€11,90</sale-price>
+
+      <compare-at-price class="text-subdued text-sm line-through">
+        <span class="sr-only">Prix normal</span>€29,90</compare-at-price></price-list></div><div class="horizontal-product__cta"><form method="post" action="/cart/add" id="complementary-product-template--30066190483788__main--15152116433228" accept-charset="UTF-8" class="shopify-product-form" enctype="multipart/form-data" is="product-form"><input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" name="quantity" value="1">
+              <input type="hidden" name="id" value="53641388360012">
+<button type="submit" class="button button--sm button--subdued"
+  
+  
+  
+  
+  
+  
+  
+  is="custom-button"
+ >+ Ajouter</button><input type="hidden" name="product-id" value="15152116433228" /><input type="hidden" name="section-id" value="template--30066190483788__main" /></form></div></div>
+</div>
+<div class="horizontal-product  rounded-xs snap-start"><img src="//soya-paris.com/cdn/shop/files/4-Coussin_Lombaire_Ergonomique_Soya_couverture_HD.webp?v=1760852760&amp;width=1200" alt="Coussin Lombaire Ergonomique Soya" srcset="//soya-paris.com/cdn/shop/files/4-Coussin_Lombaire_Ergonomique_Soya_couverture_HD.webp?v=1760852760&amp;width=64 64w, //soya-paris.com/cdn/shop/files/4-Coussin_Lombaire_Ergonomique_Soya_couverture_HD.webp?v=1760852760&amp;width=128 128w, //soya-paris.com/cdn/shop/files/4-Coussin_Lombaire_Ergonomique_Soya_couverture_HD.webp?v=1760852760&amp;width=80 80w, //soya-paris.com/cdn/shop/files/4-Coussin_Lombaire_Ergonomique_Soya_couverture_HD.webp?v=1760852760&amp;width=160 160w" width="1200" height="1200" loading="lazy" sizes="(max-width: 740px) 64px, 80px" class="horizontal-product__image rounded-xs"><div class="horizontal-product__info">
+    <div class="v-stack gap-0.5"><a href="/products/coussin-lombaire-ergonomique-soya?pr_prod_strat=pinned&pr_rec_id=8858b6cfb&pr_rec_pid=15152116302156&pr_ref_pid=15152183443788&pr_seq=uniform" data-instant class="text-sm bold">
+          <span class="reversed-link hover:show">Coussin Lombaire Ergonomique Soya</span>
+        </a><price-list class="price-list  "><sale-price class="text-subdued text-sm">
+        <span class="sr-only">Prix de vente</span>€49,90</sale-price></price-list></div><div class="horizontal-product__cta"><form method="post" action="/cart/add" id="complementary-product-template--30066190483788__main--15152116302156" accept-charset="UTF-8" class="shopify-product-form" enctype="multipart/form-data" is="product-form"><input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" name="quantity" value="1">
+              <input type="hidden" name="id" value="53641388097868">
+<button type="submit" class="button button--sm button--subdued"
+  
+  
+  
+  
+  
+  
+  
+  is="custom-button"
+ >+ Ajouter</button><input type="hidden" name="product-id" value="15152116302156" /><input type="hidden" name="section-id" value="template--30066190483788__main" /></form></div></div>
+</div>
+</div></div></product-recommendations></div></safe-sticky></div>
+  </product-rerender>
+</div><product-rerender id="product-form-15152183443788-template--30066190483788__main-sticky-bar" observe-form="product-form-15152183443788-template--30066190483788__main"><product-quick-add form="product-form-15152183443788-template--30066190483788__main" class="product-quick-add"><buy-buttons template="oreiller-soya-2-0" form="product-form-15152183443788-template--30066190483788__main" class="sm:hidden">
+<button type="submit" class="button button--lg button--secondary w-full"
+  
+  
+  
+  
+  form="product-form-15152183443788-template--30066190483788__main"
+  
+  
+  is="custom-button"
+ >Ajouter au panier</button></buy-buttons><div class="product-quick-add__variant  hidden sm:grid"><variant-media widths="80,160" form="product-form-15152183443788-template--30066190483788__main"><img src="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0HD.webp?v=1771634981&amp;width=1200" alt="Oreiller Soya 2.0" srcset="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0HD.webp?v=1771634981&amp;width=80 80w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0HD.webp?v=1771634981&amp;width=160 160w" width="1200" height="1200" loading="lazy" sizes="80px" class="rounded-xs"></variant-media><div class="v-stack gap-0.5"><a href="/products/oreiller-soya-2-0" class="bold truncate-text">Oreiller Soya 2.0</a><price-list class="price-list  "><sale-price class="text-subdued">
+      <span class="sr-only">Prix de vente</span>€119,90</sale-price></price-list></div>
+
+          <buy-buttons template="oreiller-soya-2-0" form="product-form-15152183443788-template--30066190483788__main" force-secondary-button>
+<button type="submit" class="button button--secondary"
+  
+  
+  
+  
+  form="product-form-15152183443788-template--30066190483788__main"
+  
+  
+  is="custom-button"
+ >Ajouter au panier</button></buy-buttons>
+        </div>
+      </product-quick-add></product-rerender><template id="quick-buy-content"><product-rerender id="quick-buy-modal-content" observe-form="quick-buy-form-15152183443788-template--30066190483788__main">
+    <div class="quick-buy-drawer__variant text-start h-stack gap-6" slot="header"><variant-media widths="80,160" form="quick-buy-form-15152183443788-template--30066190483788__main"><img src="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0HD.webp?v=1771634981&amp;width=1200" alt="Oreiller Soya 2.0" srcset="//soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0HD.webp?v=1771634981&amp;width=80 80w, //soya-paris.com/cdn/shop/files/1-oreiller-soya-2_0HD.webp?v=1771634981&amp;width=160 160w" width="1200" height="1200" loading="lazy" sizes="80px" class="quick-buy-drawer__media rounded-xs"></variant-media><div class="v-stack gap-0.5">
+        <a href="/products/oreiller-soya-2-0" class="bold justify-self-start">Oreiller Soya 2.0</a><price-list class="price-list  "><sale-price class="text-subdued">
+      <span class="sr-only">Prix de vente</span>€119,90</sale-price></price-list></div>
+    </div>
+
+    <div class="quick-buy-drawer__info"><form method="post" action="/cart/add" id="quick-buy-form-15152183443788-template--30066190483788__main" accept-charset="UTF-8" class="shopify-product-form" enctype="multipart/form-data" is="product-form"><input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" disabled name="id" value="53641794158924"><div class="v-stack gap-4"><buy-buttons class="buy-buttons " template="oreiller-soya-2-0" form="quick-buy-form-15152183443788-template--30066190483788__main">
+<button type="submit" class="button button--lg"
+  
+  
+  
+  
+  
+  
+  
+  is="custom-button"
+ >Ajouter au panier</button></buy-buttons>
+  </div><input type="hidden" name="product-id" value="15152183443788" /><input type="hidden" name="section-id" value="template--30066190483788__main" /></form></div>
+  </product-rerender>
+</template></section>

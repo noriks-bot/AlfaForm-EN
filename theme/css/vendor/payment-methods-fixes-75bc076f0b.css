@@ -1,0 +1,2 @@
+html.apple-pay-capable .sv-wc-external-checkout{display:block!important}html.apple-pay-capable .sv-wc-apple-pay-button{cursor:pointer;display:block!important;min-height:44px;opacity:.7;pointer-events:none}html.apple-pay-ready .sv-wc-apple-pay-button{opacity:1;pointer-events:auto;transition:opacity .3s ease}
+/*# sourceMappingURL=payment-methods-fixes.css.map */

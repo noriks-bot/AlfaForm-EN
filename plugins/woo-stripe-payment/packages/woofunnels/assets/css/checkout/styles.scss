@@ -1,0 +1,70 @@
+.wfacp_smart_buttons {
+  .wfacp_smart_button_outer_buttons {
+    .wc-stripe-checkout-banner-gateway {
+      &:not(active) {
+        display: none;
+      }
+    }
+
+    .wc-stripe-wfacp-express-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .wc-stripe-checkout-banner-gateway {
+        margin: 0 5px;
+        max-width: 240px;
+
+        #wc-stripe-payment-request-banner {
+          min-width: 240px;
+        }
+      }
+    }
+
+    @media (max-width: 575px) {
+      .wc-stripe-wfacp-express-buttons {
+        flex-wrap: wrap;
+
+        .wc-stripe-checkout-banner-gateway {
+          flex: 1 1 100%;
+          max-width: 100%;
+
+          &:nth-child(n+2) {
+            margin: 10px 0 0 0 !important;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+.wfacp_smart_buttons {
+  li.wc-stripe-checkout-banner-gateway {
+    margin: 0 5px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  #wfacp_smart_buttons.wfacp_smart_buttons .wfacp_smart_button_container .StripeElement iframe {
+    max-height: 55px !important;
+    height: 100% !important;
+  }
+}
+
+#wfacp-e-form {
+  .wfacp_main_form {
+    div[class*=payment_method_stripe_] {
+      .wc-stripe-saved-methods-container {
+        .select2-container {
+          .select2-selection--single {
+            .select2-selection__rendered {
+              display: flex;
+              padding: 0 0 0 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

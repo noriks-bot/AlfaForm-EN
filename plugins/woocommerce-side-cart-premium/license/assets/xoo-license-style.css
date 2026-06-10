@@ -1,0 +1,167 @@
+.xoo-lic-cont.xoo-lic-inline {
+    background-color: #fff;
+    max-width: 600px;
+    padding: 30px 30px;
+    margin: 20px auto;
+}
+.xoo-lic-grp {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.xoo-lic-grp label {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+form.xoo-license-form button.button {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 200px;
+    margin: 10px auto;
+    display: table;
+    padding: 1px;
+}
+
+.xoo-lic-head {
+    font-size: 22px;
+    margin: 0px 0 25px 0;
+    text-align: center;
+    font-weight: 600;
+}
+
+.xoo-lic-notices {
+    padding: 10px 20px;
+    background-color: antiquewhite;
+    margin: 20px 0;
+    letter-spacing: 1.1px;
+    line-height: 24px;
+    display: none;
+}
+
+.xoo-lic-active {
+    font-weight: 600;
+    font-size: 1.5em;
+    letter-spacing: 1.2px;
+    text-align: center;
+}
+
+.xoo-license-popup .xoo-lic-popup-form {
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 9999999;
+    max-width: 600px;
+}
+
+span.xoo-lic-opac {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    z-index: 9999998;
+    opacity: 0.5;
+}
+
+span.xoo-lic-popup-close {
+    position: absolute;
+    top: -11px;
+    right: -11px;
+    font-weight: bold;
+    color: #f34c4c;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.xoo-license-popup {
+    display: none;
+}
+
+.xoo-license-popup-active {
+    display: block;
+}
+
+span.xoo-el-lic-popup-toggle {
+    display: table;
+    cursor: pointer;
+    border-bottom: 1px dashed;
+}
+
+.xoo-lic-pop-toggle-liner[data-licactive="no"] .xoo-el-lic-popup-toggle {
+    background-color: #2a9d8f;
+    padding: 16px 30px;
+    color: #fff;
+    border-radius: 25px;
+    margin: 0 auto;
+    border-bottom: 0;
+}
+
+
+.xoo-lic-pop-toggle-liner[data-licactive="yes"] {
+    margin-bottom: 20px;
+    display: table;
+    margin-left: auto;
+    margin-top: -10px;
+}
+
+.xoo-sc-tab-content .xoo-lic-active {
+    font-size: 16px;
+    padding: 10px 0;
+}
+.xoo-lic-expired{
+    color: #ff0000;
+}
+
+span.xoo-toggle-license-form {
+    color: #1a7dc7;
+    border-bottom: 1px dashed;
+    cursor: pointer;
+    user-select: none;
+}
+.xoo-lic-pop-content{
+    background-color: #fff;
+    padding: 40px;
+}
+
+.xoo-settings-container[active-tab="license"] .xoo-sc-bottom-btns {
+    display: none;
+}
+
+.xoo-lic-refresh-info {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.xoo-lic-txt-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+@keyframes xoo-as-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.xoo-lic-refresh-info.xoo-as-processing .dashicons {
+  animation: xoo-as-spin 2s linear infinite;
+
+}
+
+.xoo-lic-refresh-info.xoo-as-processing {
+   pointer-events: none;
+  user-select: none;
+}

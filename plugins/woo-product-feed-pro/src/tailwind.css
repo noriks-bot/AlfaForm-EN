@@ -1,0 +1,8 @@
+/* Tailwind base - with prefix adt-tw- */
+@tailwind base;
+
+/* Tailwind components - with prefix adt-tw- */
+@tailwind components;
+
+/* Tailwind utilities - with prefix adt-tw- */
+@tailwind utilities;

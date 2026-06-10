@@ -1,0 +1,409 @@
+/*
+ * Noriks Checkout — Hide WP chrome, native WC payment
+ * Vigoshop CDN CSS handles visual styling
+ */
+
+/* ===== HIDE EVERYTHING OUTSIDE CHECKOUT ===== */
+body.woocommerce-checkout .vigo-header,
+body.woocommerce-checkout header,
+body.woocommerce-checkout .navbar,
+body.woocommerce-checkout .top-header,
+body.woocommerce-checkout .marquee,
+body.woocommerce-checkout .footer-wrap,
+body.woocommerce-checkout footer,
+body.woocommerce-checkout .footer,
+body.woocommerce-checkout .footer-mobile,
+body.woocommerce-checkout .site-header,
+body.woocommerce-checkout .site-footer,
+body.woocommerce-checkout .storefront-breadcrumb,
+body.woocommerce-checkout .woocommerce-breadcrumb,
+body.woocommerce-checkout .woocommerce-form-coupon-toggle,
+body.woocommerce-checkout .woocommerce-info,
+body.woocommerce-checkout .woocommerce-message,
+body.woocommerce-checkout .storefront-handheld-footer-bar,
+body.woocommerce-checkout .xoo-wsc-container,
+body.woocommerce-checkout .xoo-wsc-markup,
+body.woocommerce-checkout .xoo-wsc-modal,
+body.woocommerce-checkout .xoo-wsc-markup-notices,
+body.woocommerce-checkout .site-info,
+body.woocommerce-checkout .footer-widgets,
+body.woocommerce-checkout #secondary,
+body.woocommerce-checkout .widget-area,
+body.woocommerce-checkout #colophon,
+body.woocommerce-checkout .entry-header,
+body.woocommerce-checkout .page-header,
+body.woocommerce-checkout .entry-title,
+body.woocommerce-checkout h1.entry-title,
+body.woocommerce-checkout .page-title,
+body.woocommerce-checkout .hero,
+body.woocommerce-checkout .announcement-bar,
+body.woocommerce-checkout .promo-banner,
+body.woocommerce-checkout .ticker,
+body.woocommerce-checkout .woocommerce-notices-wrapper:empty,
+body.woocommerce-checkout .cookie-consent,
+body.woocommerce-checkout .cookie-bar,
+body.woocommerce-checkout .hs_loader,
+body.woocommerce-checkout #languageModal,
+body.woocommerce-checkout .language-modal,
+body.woocommerce-checkout .language-trigger,
+body.woocommerce-checkout .country-selector,
+body.woocommerce-checkout .info-banner,
+body.woocommerce-checkout .info-items-container,
+body.woocommerce-checkout .phone-footer-checkout,
+body.woocommerce-checkout .checkout_coupon,
+body.woocommerce-checkout .woocommerce-form-coupon,
+body.woocommerce-checkout .post-edit-link,
+body.woocommerce-checkout .edit-link,
+body.woocommerce-checkout a.post-edit-link {
+  display: none !important;
+}
+
+/* ===== HIDE WC FIELDS WE DON'T NEED ===== */
+body.woocommerce-checkout p#billing_country_field,
+body.woocommerce-checkout p#billing_state_field,
+body.woocommerce-checkout #kl_newsletter_checkbox_field,
+body.woocommerce-checkout #hsplus_accepts_marketing_field,
+body.woocommerce-checkout .woocommerce-additional-fields > h3,
+body.woocommerce-checkout .woocommerce-additional-fields__field-wrapper,
+body.woocommerce-checkout .woocommerce-privacy-policy-text {
+  display: none !important;
+}
+
+/* ===== COD PROMPT ===== */
+body.woocommerce-checkout #hs-cod-checkout-prompt {
+  display: none !important;
+}
+
+/* ===== PAYMENT TITLE ===== */
+body.woocommerce-checkout h3.payment-title {
+  display: block !important;
+  font-size: 19.6px !important;
+  font-weight: 700 !important;
+  margin: 10px 0 10px !important;
+  color: #333 !important;
+}
+
+/* ===== #payment — force visible (vigoshop CDN hides it) ===== */
+body.woocommerce-checkout #payment {
+  display: block !important;
+  position: static !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: auto !important;
+  overflow: visible !important;
+  pointer-events: auto !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+body.woocommerce-checkout #payment * {
+  visibility: visible !important;
+}
+
+/* WC native place_order button — below everything */
+body.woocommerce-checkout #payment .place-order {
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+body.woocommerce-checkout #place_order {
+  width: 100% !important;
+  max-width: 100% !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  padding: 18px 0 !important;
+  border: 0 !important;
+  border-radius: 4px !important;
+  color: #fff !important;
+  background: linear-gradient(180deg, #3ec000 0, #00ac00 100%) !important;
+  box-shadow: 0 2px 0 #090 !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+}
+
+/* ===== Payment methods — vigoshop style ===== */
+body.woocommerce-checkout #payment .wc_payment_methods {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 0 21px !important;
+  border: none !important;
+}
+body.woocommerce-checkout #payment .wc_payment_method {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 1px solid #d1dbe5 !important;
+  border-bottom: none !important;
+  background: #fff !important;
+}
+body.woocommerce-checkout #payment .wc_payment_method:first-child {
+  border-radius: 5px 5px 0 0 !important;
+}
+body.woocommerce-checkout #payment .wc_payment_method:last-child {
+  border-radius: 0 0 5px 5px !important;
+  border-bottom: 1px solid #d1dbe5 !important;
+}
+/* Selected = blue bg */
+body.woocommerce-checkout #payment .wc_payment_method:has(input:checked) {
+  background: #e8f3ff !important;
+}
+/* Hide ALL native radio inputs in payment */
+body.woocommerce-checkout #payment .wc_payment_method input.input-radio,
+body.woocommerce-checkout #payment .wc_payment_method input[type="radio"] {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  position: absolute !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+/* Custom radio circle via label ::before */
+body.woocommerce-checkout #payment .wc_payment_method > label::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  border: 2px solid #ccc !important;
+  border-radius: 50% !important;
+  background: #fff !important;
+  margin-right: 12px !important;
+  flex-shrink: 0 !important;
+  box-sizing: border-box !important;
+}
+body.woocommerce-checkout #payment .wc_payment_method:has(input:checked) > label::before {
+  background: #3DBD00 !important;
+  border-color: #3DBD00 !important;
+  box-shadow: inset 0 0 0 3px #fff !important;
+}
+/* Labels */
+body.woocommerce-checkout #payment .wc_payment_method > label {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  padding: 16px !important;
+  margin: 0 !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: #333 !important;
+  cursor: pointer !important;
+  row-gap: 10px !important;
+}
+body.woocommerce-checkout #payment .wc_payment_method:has(input:checked) > label {
+  font-weight: 700 !important;
+}
+/* Card/payment icons — right-aligned, consistent size */
+body.woocommerce-checkout #payment .wc_payment_method > label img {
+  max-height: 25px !important;
+  width: auto !important;
+  margin-left: 8px !important;
+}
+/* Fee badges — "Besplatno" for card & PayPal, price for COD */
+body.woocommerce-checkout #payment .wc_payment_method > label::after {
+  content: 'Brezplačno' !important;
+  display: inline-block !important;
+  padding: 3px 10px !important;
+  margin-left: auto !important;
+  border-radius: 5px !important;
+  background: #9ce79c !important;
+  color: #228b22 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 21px !important;
+  white-space: nowrap !important;
+}
+body.woocommerce-checkout #payment .payment_method_cod > label::after {
+  content: '1,99\00a0€' !important;
+  background: #e3e6e8 !important;
+  color: #5f6061 !important;
+}
+
+/* Payment box (card fields) */
+body.woocommerce-checkout #payment .payment_box {
+  padding: 16px !important;
+  background: #f7f8fa !important;
+  border-top: 1px solid #e3e6e8 !important;
+  min-height: 60px;
+  overflow: hidden;
+}
+body.woocommerce-checkout #payment .payment_box fieldset {
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* ===== Field descriptions via CSS ::after ===== */
+#billing_email_field::after {
+  content: 'Za potrditev naročila in sledenje pošiljki';
+  display: block;
+  font-size: 13px;
+  color: #5f6061;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+/* Phone description — left + right on same line */
+#billing_phone_field {
+  margin-bottom: 24px !important;
+  position: relative !important;
+}
+#billing_phone_field::after {
+  content: 'Primer: 031234567' !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: -20px !important;
+  font-size: 13px !important;
+  color: #5f6061 !important;
+  line-height: 1.4 !important;
+}
+#billing_phone_field::before {
+  content: 'Za pomoč pri dostavi' !important;
+  position: absolute !important;
+  right: 0 !important;
+  bottom: -20px !important;
+  font-size: 13px !important;
+  color: #5f6061 !important;
+  line-height: 1.4 !important;
+  z-index: 1 !important;
+}
+
+/* ===== Order summary + place-order — full width ===== */
+body.woocommerce-checkout .vigo-checkout-total,
+body.woocommerce-checkout .place-order-title,
+body.woocommerce-checkout .form-row.place-order,
+body.woocommerce-checkout #hs-vat-tax-checkout-prompt,
+body.woocommerce-checkout #hs-cod-checkout-prompt,
+body.woocommerce-checkout .woocommerce-checkout-review-order,
+body.woocommerce-checkout .woocommerce-checkout-review-order-table,
+body.woocommerce-checkout .col-2,
+body.woocommerce-checkout .woocommerce-additional-fields {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  float: none !important;
+}
+
+/* ===== Terms checkbox — clickable ===== */
+body.woocommerce-checkout #agree_to_terms_checkbox {
+  -webkit-appearance: checkbox !important;
+  -moz-appearance: checkbox !important;
+  appearance: checkbox !important;
+  display: inline-block !important;
+  width: 18px !important;
+  height: 18px !important;
+  opacity: 1 !important;
+  position: static !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  vertical-align: middle !important;
+  margin-right: 6px !important;
+}
+
+/* ===== Order summary prices always visible ===== */
+body.woocommerce-checkout .noriks-order-summary .review-addons-price,
+body.woocommerce-checkout .noriks-order-summary .info-price,
+body.woocommerce-checkout .noriks-order-summary .review-sale-price,
+body.woocommerce-checkout .noriks-order-summary .review-addons-price *,
+body.woocommerce-checkout .noriks-order-summary .info-price * {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  font-size: 14px !important;
+  color: #333 !important;
+}
+body.woocommerce-checkout .noriks-order-summary .review-addons-price,
+body.woocommerce-checkout .noriks-order-summary .info-price {
+  text-align: right !important;
+  min-width: 60px !important;
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+}
+body.woocommerce-checkout .noriks-order-summary .review-section-container {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+body.woocommerce-checkout .noriks-order-summary .review-addons-title {
+  flex: 1 !important;
+}
+body.woocommerce-checkout .noriks-order-summary .review-product-remove {
+  display: none !important;
+}
+
+/* ===== Shipping free badge ===== */
+body.woocommerce-checkout .shipping-free-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 5px;
+  background: #9ce79c;
+  color: #228b22;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+/* ===== blockUI — transparent (no flicker, payment logic works) ===== */
+body.woocommerce-checkout .blockUI.blockOverlay {
+  background: transparent !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+body.woocommerce-checkout .blockUI.blockMsg {
+  display: none !important;
+}
+
+/* ===== Fix: vigoshop sets title div width:420px which pushes price off screen ===== */
+body.woocommerce-checkout .noriks-order-summary .review-section-container.review-addons .review-addons-title,
+body.woocommerce-checkout .noriks-order-summary .review-section-container.review-addons .review-addons-title div,
+body.woocommerce-checkout .noriks-order-summary .review-product-info,
+body.woocommerce-checkout .noriks-order-summary .review-product-info div {
+  width: auto !important;
+  flex-basis: auto !important;
+  flex: 1 !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* ===== Mobile: full-bleed button, no white gaps ===== */
+@media (max-width: 560px) {
+  body.woocommerce-checkout #order_review {
+    background: transparent !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  body.woocommerce-checkout #order_review .button {
+    border-radius: 0 !important;
+  }
+}
+
+
+/* PayPal reCaptcha container — no margin */
+#ppcp-recaptcha-v2-container { margin: 0 !important; }
+
+/* Shipping section — no bottom margin */
+#custom_shipping { margin-bottom: 0 !important; }
+
+
+/* Free shipping badge — only the explicit .shipping-free-badge span */
+.noriks-order-summary .shipping_order_review .review-addons-price .shipping-free-badge {
+  display: inline-block !important;
+  padding: 3px 10px !important;
+  border-radius: 5px !important;
+  background: #9ce79c !important;
+  color: #228b22 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+/* More space between total and Naroči button */
+.noriks-order-summary .vigo-checkout-total__sum { margin-bottom: 10px !important; }

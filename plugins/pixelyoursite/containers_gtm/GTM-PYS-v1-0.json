@@ -1,0 +1,2397 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2024-11-18 10:22:00",
+    "containerVersion": {
+        "path": "accounts/6209157978/containers/198599132/versions/0",
+        "accountId": "6209157978",
+        "containerId": "198599132",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/6209157978/containers/198599132",
+            "accountId": "6209157978",
+            "containerId": "198599132",
+            "name": "PYS_Container_1.0",
+            "publicId": "GTM-M6W522SQ",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1729859494827",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6209157978/containers/198599132/workspaces?apiLink=container",
+            "features": {
+                "supportUserPermissions": true,
+                "supportEnvironments": true,
+                "supportWorkspaces": true,
+                "supportGtagConfigs": false,
+                "supportBuiltInVariables": true,
+                "supportClients": false,
+                "supportFolders": true,
+                "supportTags": true,
+                "supportTemplates": true,
+                "supportTriggers": true,
+                "supportVariables": true,
+                "supportVersions": true,
+                "supportZones": true,
+                "supportTransformations": false
+            },
+            "tagIds": [
+                "GTM-M6W522SQ"
+            ]
+        },
+        "tag": [
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "tagId": "52",
+                "name": "GA4 PixelYourSite Advanced Marketing Events",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "userDataVariable",
+                        "value": "{{User-Provided Data}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enhancedUserId",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "{{Event}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "{{GA4 ID}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventSettingsVariable",
+                        "value": "{{GA4 Automated Parameters}}"
+                    }
+                ],
+                "fingerprint": "1729859517269",
+                "firingTriggerId": [
+                    "21"
+                ],
+                "parentFolderId": "7",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "tagId": "64",
+                "name": "GA4 PixelYourSite Custom Event (up to 5 parameters)",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "userDataVariable",
+                        "value": "{{User-Provided Data}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "getEcommerceDataFrom",
+                        "value": "dataLayer"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enhancedUserId",
+                        "value": "true"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "eventSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "{{Custom_Parameter_One}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{Custom_Parameter_One_Value}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "{{Custom_Parameter_Two}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{Custom_Parameter_Two_Value}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "{{Custom_Parameter_Three}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{Custom_Parameter_Three_Value}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "{{Custom_Parameter_Four}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{Custom_Parameter_Four_Value}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "{{Custom_Parameter_Five}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{Custom_Parameter_Five_Value}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "{{Event}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "{{GA4 ID}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventSettingsVariable",
+                        "value": "{{GA4 Automated Parameters}}"
+                    }
+                ],
+                "fingerprint": "1729859517336",
+                "firingTriggerId": [
+                    "58"
+                ],
+                "parentFolderId": "7",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "tagId": "69",
+                "name": "GA4 PixelYourSite Automated Events",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "userDataVariable",
+                        "value": "{{User-Provided Data}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enhancedUserId",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "{{Event}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "{{GA4 ID}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventSettingsVariable",
+                        "value": "{{GA4 Automated Parameters}}"
+                    }
+                ],
+                "fingerprint": "1729859517336",
+                "firingTriggerId": [
+                    "68"
+                ],
+                "parentFolderId": "7",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "tagId": "71",
+                "name": "GA4 - Base - Tag",
+                "type": "googtag",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "tagId",
+                        "value": "{{GA4 ID}}"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "configSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "send_page_view"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "true"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "debug_mode"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "false"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1729860683165",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "parentFolderId": "7",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "tagId": "72",
+                "name": "GA4 PixelYourSite Ecommerce Events",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "userDataVariable",
+                        "value": "{{User-Provided Data}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "getEcommerceDataFrom",
+                        "value": "dataLayer"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enhancedUserId",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "{{Event}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "{{GA4 ID}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventSettingsVariable",
+                        "value": "{{GA4 Automated Parameters}}"
+                    }
+                ],
+                "fingerprint": "1729859517337",
+                "firingTriggerId": [
+                    "67"
+                ],
+                "parentFolderId": "7",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "triggerId": "21",
+                "name": "PYS Advanced Marketing Events",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "^(?!gtm\\.dom$|gtm\\.load$).*"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{triggerType.type}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "advanced_marketing"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1729877993505",
+                "parentFolderId": "18"
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "triggerId": "58",
+                "name": "PYS Manual Events",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "^(?!gtm\\.dom$|gtm\\.load$).*"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{triggerType.type}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "manual"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1729878022402",
+                "parentFolderId": "18"
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "triggerId": "67",
+                "name": "PYS Ecommerce Events",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "^(?!gtm\\.dom$|gtm\\.load$).*"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{triggerType.type}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "ecommerce"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1729878011177",
+                "parentFolderId": "18"
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "triggerId": "68",
+                "name": "PYS Automated Events",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "^(?!gtm\\.dom$|gtm\\.load$).*"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{triggerType.type}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "automated"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1729878001460",
+                "parentFolderId": "18"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "4",
+                "name": "manualName",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "manualName"
+                    }
+                ],
+                "fingerprint": "1729859517267",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "5",
+                "name": "Custom_DataLayer",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "manualDataLayer"
+                    }
+                ],
+                "fingerprint": "1729859517267",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "6",
+                "name": "Custom_Parameter_Five",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n  // Get the event name\n  var eventName = {{manualName}};\n  // Form the dynamic key\n  var dynamicKey = 'manual_' + eventName;\n\n  var customDataLayerName = {{Custom_DataLayer}};\n  \nvar dataLayerObject = (customDataLayerName && window[customDataLayerName] && window[customDataLayerName].length > 0) \n? window[customDataLayerName] \n: window.dataLayer;\n\nif (dataLayerObject) {\n    // Search in the data layer for an object that contains the dynamic key\n    var eventObject = dataLayerObject.find(function(item) {\n      // Check if the object has a property with the name dynamicKey\n      return item.hasOwnProperty(dynamicKey);\n    });\n   \n  // If the object is found and contains the dynamic key\n  if (eventObject && eventObject[dynamicKey]) {\n    // Return the key from the object with the dynamic key\n    var dynamicData = eventObject[dynamicKey];\n    var keys = Object.keys(dynamicData);\n    if (keys[4]) {\n      return keys[4];\n    }\n  }\n}\n  // If no object with such key is found, return an empty string\n  return undefined;\n}\n"
+                    }
+                ],
+                "fingerprint": "1729859517267",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "9",
+                "name": "GA4 ID",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "G-TEST123456"
+                    }
+                ],
+                "fingerprint": "1729859517267",
+                "parentFolderId": "8",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "11",
+                "name": "user-last-name",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "user_data.address.0.sha256_last_name"
+                    }
+                ],
+                "fingerprint": "1729859517267",
+                "parentFolderId": "10",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "12",
+                "name": "user-first-name",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "user_data.address.0.sha256_first_name"
+                    }
+                ],
+                "fingerprint": "1729859517267",
+                "parentFolderId": "10",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "13",
+                "name": "user-country",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "user_data.address.0.country"
+                    }
+                ],
+                "fingerprint": "1729859517267",
+                "parentFolderId": "10",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "14",
+                "name": "user-postal-code",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "user_data.address.0.postal_code"
+                    }
+                ],
+                "fingerprint": "1729859517267",
+                "parentFolderId": "10",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "15",
+                "name": "user-email",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "user_data.sha256_email_address.0"
+                    }
+                ],
+                "fingerprint": "1729859517267",
+                "parentFolderId": "10",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "16",
+                "name": "user-phone",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "user_data.sha256_phone_number.0"
+                    }
+                ],
+                "fingerprint": "1729859517267",
+                "parentFolderId": "10",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "17",
+                "name": "User-Provided Data",
+                "type": "awec",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "mode",
+                        "value": "MANUAL"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "country",
+                        "value": "{{user-country}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "last_name",
+                        "value": "{{user-last-name}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "phone_number",
+                        "value": "{{user-phone}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "postal_code",
+                        "value": "{{user-postal-code}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "first_name",
+                        "value": "{{user-first-name}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "email",
+                        "value": "{{user-email}}"
+                    }
+                ],
+                "fingerprint": "1729859517267",
+                "parentFolderId": "10",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "20",
+                "name": "triggerType.type",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "triggerType.type"
+                    }
+                ],
+                "fingerprint": "1729859517267",
+                "parentFolderId": "19",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "23",
+                "name": "target_url",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.target_url"
+                    }
+                ],
+                "fingerprint": "1729859517268",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "24",
+                "name": "video_type",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.video_type"
+                    }
+                ],
+                "fingerprint": "1729859517268",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "25",
+                "name": "event_hour",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.event_hour"
+                    }
+                ],
+                "fingerprint": "1729859517268",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "26",
+                "name": "form_id",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.form_id"
+                    }
+                ],
+                "fingerprint": "1729859517268",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "27",
+                "name": "landing_page",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.landing_page"
+                    }
+                ],
+                "fingerprint": "1729859517268",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "28",
+                "name": "download_name",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.download_name"
+                    }
+                ],
+                "fingerprint": "1729859517268",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "29",
+                "name": "text",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.text"
+                    }
+                ],
+                "fingerprint": "1729859517268",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "30",
+                "name": "post_type",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.post_type"
+                    }
+                ],
+                "fingerprint": "1729859517268",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "31",
+                "name": "plugin",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.plugin"
+                    }
+                ],
+                "fingerprint": "1729859517268",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "32",
+                "name": "download_type",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.download_type"
+                    }
+                ],
+                "fingerprint": "1729859517268",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "33",
+                "name": "traffic_source",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.traffic_source"
+                    }
+                ],
+                "fingerprint": "1729859517268",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "34",
+                "name": "event_id",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.event_id"
+                    }
+                ],
+                "fingerprint": "1729859517268",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "35",
+                "name": "post_id",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.post_id"
+                    }
+                ],
+                "fingerprint": "1729859517268",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "36",
+                "name": "search_term",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.search"
+                    }
+                ],
+                "fingerprint": "1729859517268",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "37",
+                "name": "download_url",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.download_url"
+                    }
+                ],
+                "fingerprint": "1729859517268",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "38",
+                "name": "user_role",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.user_role"
+                    }
+                ],
+                "fingerprint": "1729859517269",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "39",
+                "name": "utm_campaign",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.utm_campaign"
+                    }
+                ],
+                "fingerprint": "1729859517269",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "40",
+                "name": "event_url",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.event_url"
+                    }
+                ],
+                "fingerprint": "1729859517269",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "41",
+                "name": "event_day",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.event_day"
+                    }
+                ],
+                "fingerprint": "1729859517269",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "42",
+                "name": "page_title",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.page_title"
+                    }
+                ],
+                "fingerprint": "1729859517269",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "43",
+                "name": "video_title",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.video_title"
+                    }
+                ],
+                "fingerprint": "1729859517269",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "44",
+                "name": "progress",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.progress"
+                    }
+                ],
+                "fingerprint": "1729859517269",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "45",
+                "name": "utm_medium",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.utm_medium"
+                    }
+                ],
+                "fingerprint": "1729859517269",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "46",
+                "name": "utm_term",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.utm_term"
+                    }
+                ],
+                "fingerprint": "1729859517269",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "47",
+                "name": "event_month",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.event_month"
+                    }
+                ],
+                "fingerprint": "1729859517269",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "48",
+                "name": "utm_content",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.utm_content"
+                    }
+                ],
+                "fingerprint": "1729859517269",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "49",
+                "name": "video_id",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.video_id"
+                    }
+                ],
+                "fingerprint": "1729859517269",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "50",
+                "name": "utm_source",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.utm_source"
+                    }
+                ],
+                "fingerprint": "1729859517269",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "51",
+                "name": "GA4 Automated Parameters",
+                "type": "gtes",
+                "parameter": [
+                    {
+                        "type": "LIST",
+                        "key": "eventSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "page_title"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{page_title}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "post_type"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{post_type}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "post_id"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{post_id}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "plugin"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{plugin}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "user_role"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{user_role}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "traffic_source"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{traffic_source}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "utm_source"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{utm_source}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "utm_medium"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{utm_medium}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "utm_campaign"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{utm_campaign}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "utm_content"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{utm_content}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "utm_term"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{utm_term}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "event_day"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{event_day}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "event_month"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{event_month}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "event_id"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{event_id}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "event_url"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{event_url}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "landing_page"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{landing_page}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "text"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{text}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "target_url"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{target_url}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "progress"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{progress}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "video_type"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{video_type}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "video_title"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{video_title}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "video_id"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{video_id}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "form_id"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{form_id}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "download_type"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{download_type}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "download_name"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{download_name}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "download_url"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{download_url}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "search_term"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{search_term}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "event_hour"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{event_hour}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1729859517269",
+                "parentFolderId": "22"
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "54",
+                "name": "Custom_Parameter_One_Value",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n  // Get the event name\n  var eventName = {{manualName}};\n  // Form the dynamic key\n  var dynamicKey = 'manual_' + eventName;\n\n  var customDataLayerName = {{Custom_DataLayer}};\n  \nvar dataLayerObject = (customDataLayerName && window[customDataLayerName] && window[customDataLayerName].length > 0) \n? window[customDataLayerName] \n: window.dataLayer;\n\nif (dataLayerObject) {\n    // Search in the data layer for an object that contains the dynamic key\n    var eventObject = dataLayerObject.find(function(item) {\n    // Check if the object has a property with the name dynamicKey\n    return item.hasOwnProperty(dynamicKey);\n  });\n\n  // If the object is found and contains the dynamic key\n  if (eventObject && eventObject[dynamicKey]) {\n    // Return the key from the object with the dynamic key\n    var dynamicData = eventObject[dynamicKey];\n    var keys = Object.keys(dynamicData);\n    if (dynamicData[keys[0]]) {\n      return dynamicData[keys[0]];\n    }\n  }\n}\n  // If no object with such key is found, return an empty string\n  return undefined;\n}\n"
+                    }
+                ],
+                "fingerprint": "1729859517269",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "55",
+                "name": "Custom_Parameter_Two",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n  // Get the event name\n  var eventName = {{manualName}};\n  // Form the dynamic key\n  var dynamicKey = 'manual_' + eventName;\n\n  var customDataLayerName = {{Custom_DataLayer}};\n  \nvar dataLayerObject = (customDataLayerName && window[customDataLayerName] && window[customDataLayerName].length > 0) \n? window[customDataLayerName] \n: window.dataLayer;\n\nif (dataLayerObject) {\n    // Search in the data layer for an object that contains the dynamic key\n    var eventObject = dataLayerObject.find(function(item) {\n      // Check if the object has a property with the name dynamicKey\n      return item.hasOwnProperty(dynamicKey);\n    });\n   \n  // If the object is found and contains the dynamic key\n  if (eventObject && eventObject[dynamicKey]) {\n    // Return the key from the object with the dynamic key\n    var dynamicData = eventObject[dynamicKey];\n    var keys = Object.keys(dynamicData);\n    if (keys[1]) {\n      return keys[1];\n    }\n  }\n}\n  // If no object with such key is found, return an empty string\n  return undefined;\n}\n"
+                    }
+                ],
+                "fingerprint": "1729859517270",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "56",
+                "name": "Custom_Parameter_Four",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n  // Get the event name\n  var eventName = {{manualName}};\n  // Form the dynamic key\n  var dynamicKey = 'manual_' + eventName;\n\n  var customDataLayerName = {{Custom_DataLayer}};\n  \nvar dataLayerObject = (customDataLayerName && window[customDataLayerName] && window[customDataLayerName].length > 0) \n? window[customDataLayerName] \n: window.dataLayer;\n\nif (dataLayerObject) {\n    // Search in the data layer for an object that contains the dynamic key\n    var eventObject = dataLayerObject.find(function(item) {\n      // Check if the object has a property with the name dynamicKey\n      return item.hasOwnProperty(dynamicKey);\n    });\n   \n  // If the object is found and contains the dynamic key\n  if (eventObject && eventObject[dynamicKey]) {\n    // Return the key from the object with the dynamic key\n    var dynamicData = eventObject[dynamicKey];\n    var keys = Object.keys(dynamicData);\n    if (keys[3]) {\n      return keys[3];\n    }\n  }\n}\n  // If no object with such key is found, return an empty string\n  return undefined;\n}\n"
+                    }
+                ],
+                "fingerprint": "1729859517270",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "57",
+                "name": "Custom_Parameter_Three",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n  // Get the event name\n  var eventName = {{manualName}};\n  // Form the dynamic key\n  var dynamicKey = 'manual_' + eventName;\n\n  var customDataLayerName = {{Custom_DataLayer}};\n  \nvar dataLayerObject = (customDataLayerName && window[customDataLayerName] && window[customDataLayerName].length > 0) \n? window[customDataLayerName] \n: window.dataLayer;\n\nif (dataLayerObject) {\n    // Search in the data layer for an object that contains the dynamic key\n    var eventObject = dataLayerObject.find(function(item) {\n      // Check if the object has a property with the name dynamicKey\n      return item.hasOwnProperty(dynamicKey);\n    });\n   \n  // If the object is found and contains the dynamic key\n  if (eventObject && eventObject[dynamicKey]) {\n    // Return the key from the object with the dynamic key\n    var dynamicData = eventObject[dynamicKey];\n    var keys = Object.keys(dynamicData);\n    if (keys[2]) {\n      return keys[2];\n    }\n  }\n}\n  // If no object with such key is found, return an empty string\n  return undefined;\n}\n"
+                    }
+                ],
+                "fingerprint": "1729859517270",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "59",
+                "name": "Custom_Parameter_Four_Value",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n  // Get the event name\n  var eventName = {{manualName}};\n  // Form the dynamic key\n  var dynamicKey = 'manual_' + eventName;\n\n  var customDataLayerName = {{Custom_DataLayer}};\n  \nvar dataLayerObject = (customDataLayerName && window[customDataLayerName] && window[customDataLayerName].length > 0) \n? window[customDataLayerName] \n: window.dataLayer;\n\nif (dataLayerObject) {\n    // Search in the data layer for an object that contains the dynamic key\n    var eventObject = dataLayerObject.find(function(item) {\n    // Check if the object has a property with the name dynamicKey\n    return item.hasOwnProperty(dynamicKey);\n  });\n\n  // If the object is found and contains the dynamic key\n  if (eventObject && eventObject[dynamicKey]) {\n    // Return the key from the object with the dynamic key\n    var dynamicData = eventObject[dynamicKey];\n    var keys = Object.keys(dynamicData);\n    if (dynamicData[keys[3]]) {\n      return dynamicData[keys[3]];\n    }\n  }\n}\n  // If no object with such key is found, return an empty string\n  return undefined;\n}\n"
+                    }
+                ],
+                "fingerprint": "1729859517336",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "60",
+                "name": "Custom_Parameter_Five_Value",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n  // Get the event name\n  var eventName = {{manualName}};\n  // Form the dynamic key\n  var dynamicKey = 'manual_' + eventName;\n\n  var customDataLayerName = {{Custom_DataLayer}};\n  \nvar dataLayerObject = (customDataLayerName && window[customDataLayerName] && window[customDataLayerName].length > 0) \n? window[customDataLayerName] \n: window.dataLayer;\n\nif (dataLayerObject) {\n    // Search in the data layer for an object that contains the dynamic key\n    var eventObject = dataLayerObject.find(function(item) {\n    // Check if the object has a property with the name dynamicKey\n    return item.hasOwnProperty(dynamicKey);\n  });\n\n  // If the object is found and contains the dynamic key\n  if (eventObject && eventObject[dynamicKey]) {\n    // Return the key from the object with the dynamic key\n    var dynamicData = eventObject[dynamicKey];\n    var keys = Object.keys(dynamicData);\n    if (dynamicData[keys[4]]) {\n      return dynamicData[keys[4]];\n    }\n  }\n}\n  // If no object with such key is found, return an empty string\n  return undefined;\n}\n"
+                    }
+                ],
+                "fingerprint": "1729859517336",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "61",
+                "name": "Custom_Parameter_Two_Value",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n  // Get the event name\n  var eventName = {{manualName}};\n  // Form the dynamic key\n  var dynamicKey = 'manual_' + eventName;\n\n  var customDataLayerName = {{Custom_DataLayer}};\n  \nvar dataLayerObject = (customDataLayerName && window[customDataLayerName] && window[customDataLayerName].length > 0) \n? window[customDataLayerName] \n: window.dataLayer;\n\nif (dataLayerObject) {\n    // Search in the data layer for an object that contains the dynamic key\n    var eventObject = dataLayerObject.find(function(item) {\n    // Check if the object has a property with the name dynamicKey\n    return item.hasOwnProperty(dynamicKey);\n  });\n\n  // If the object is found and contains the dynamic key\n  if (eventObject && eventObject[dynamicKey]) {\n    // Return the key from the object with the dynamic key\n    var dynamicData = eventObject[dynamicKey];\n    var keys = Object.keys(dynamicData);\n    if (dynamicData[keys[1]]) {\n      return dynamicData[keys[1]];\n    }\n  }\n}\n  // If no object with such key is found, return an empty string\n  return undefined;\n}\n"
+                    }
+                ],
+                "fingerprint": "1729859517336",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "62",
+                "name": "Custom_Parameter_One",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n  // Get the event name\n  var eventName = {{manualName}};\n  // Form the dynamic key\n  var dynamicKey = 'manual_' + eventName;\n\n  var customDataLayerName = {{Custom_DataLayer}};\n  \nvar dataLayerObject = (customDataLayerName && window[customDataLayerName] && window[customDataLayerName].length > 0) \n? window[customDataLayerName] \n: window.dataLayer;\n\nif (dataLayerObject) {\n    // Search in the data layer for an object that contains the dynamic key\n    var eventObject = dataLayerObject.find(function(item) {\n      // Check if the object has a property with the name dynamicKey\n      return item.hasOwnProperty(dynamicKey);\n    });\n   \n  // If the object is found and contains the dynamic key\n  if (eventObject && eventObject[dynamicKey]) {\n    // Return the key from the object with the dynamic key\n    var dynamicData = eventObject[dynamicKey];\n    var keys = Object.keys(dynamicData);\n    if (keys[0]) {\n      return keys[0];\n    }\n  }\n}\n  // If no object with such key is found, return an empty string\n  return undefined;\n}\n"
+                    }
+                ],
+                "fingerprint": "1729859517336",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "63",
+                "name": "Custom_Parameter_Three_Value",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n  // Get the event name\n  var eventName = {{manualName}};\n  // Form the dynamic key\n  var dynamicKey = 'manual_' + eventName;\n\n  var customDataLayerName = {{Custom_DataLayer}};\n  \nvar dataLayerObject = (customDataLayerName && window[customDataLayerName] && window[customDataLayerName].length > 0) \n? window[customDataLayerName] \n: window.dataLayer;\n\nif (dataLayerObject) {\n    // Search in the data layer for an object that contains the dynamic key\n    var eventObject = dataLayerObject.find(function(item) {\n    // Check if the object has a property with the name dynamicKey\n    return item.hasOwnProperty(dynamicKey);\n  });\n\n  // If the object is found and contains the dynamic key\n  if (eventObject && eventObject[dynamicKey]) {\n    // Return the key from the object with the dynamic key\n    var dynamicData = eventObject[dynamicKey];\n    var keys = Object.keys(dynamicData);\n    if (dynamicData[keys[2]]) {\n      return dynamicData[keys[2]];\n    }\n  }\n}\n  // If no object with such key is found, return an empty string\n  return undefined;\n}\n"
+                    }
+                ],
+                "fingerprint": "1729859517336",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "66",
+                "name": "parameter_type",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "ustomParameters.parameter_type"
+                    }
+                ],
+                "fingerprint": "1729859517336",
+                "parentFolderId": "22",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "variableId": "70",
+                "name": "video_percent",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "automatedParameters.video_percent"
+                    }
+                ],
+                "fingerprint": "1729859517336",
+                "parentFolderId": "22",
+                "formatValue": {}
+            }
+        ],
+        "folder": [
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "folderId": "3",
+                "name": "PYS Variables - Custom Parameters",
+                "fingerprint": "1729859517266"
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "folderId": "7",
+                "name": "GA4 PixelYourSite Tags",
+                "fingerprint": "1729859517267"
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "folderId": "8",
+                "name": "GA4 Variables - Tag IDs",
+                "fingerprint": "1729859517267"
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "folderId": "10",
+                "name": "PYS Variables - User Data",
+                "fingerprint": "1729859517267"
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "folderId": "18",
+                "name": "PixelYourSite Triggers",
+                "fingerprint": "1729859517267"
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "folderId": "19",
+                "name": "PYS Variables - Trigger Type",
+                "fingerprint": "1729859517267"
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "folderId": "22",
+                "name": "PixelYourSite Automated Parameters",
+                "fingerprint": "1729859517268"
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "type": "EVENT",
+                "name": "Event"
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "type": "CLICK_URL",
+                "name": "Click URL"
+            },
+            {
+                "accountId": "6209157978",
+                "containerId": "198599132",
+                "type": "CLICK_TEXT",
+                "name": "Click Text"
+            }
+        ],
+        "fingerprint": "1731925320699",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6209157978/containers/198599132/versions/0?apiLink=version"
+    }
+}

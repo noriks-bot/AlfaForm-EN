@@ -1,0 +1,276 @@
+.marketing_page_advanced-coupons-marketing {
+  background-color: #fff;
+}
+
+.pfp-marketing-page {
+  margin-top: 32px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #4C4C4B;
+  position: relative;
+}
+
+.pfp-marketing-page .container {max-width: 740px;margin-left: auto;margin-right: auto;}
+
+.pfp-marketing-page .text-center {
+  text-align: center;
+}
+
+.pfp-marketing-page .col.section-hero {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.pfp-marketing-page .pfp-marketing-page-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-decoration: none;
+  color: #bbb;
+}
+
+.pfp-marketing-page .pfp-marketing-page-close:focus,
+.pfp-marketing-page .pfp-marketing-page-close:active {
+  outline: none;
+  box-shadow: none;
+}
+
+
+.pfp-marketing-page .col.section-hero:before {
+  background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+  bottom: -160px;
+  left: 0;
+  width: calc( 100% + 20px );
+  z-index: -1;
+  height: 100%;
+  background-size: 100%;
+  background-position-x: 0;
+  background-position-y: 0;
+  margin: 0px -10px;
+}
+
+.pfp-marketing-page .hero-title {
+  font-size: 27px;
+  font-weight: 600;
+  color: #4C4C4C;
+  line-height: 1.4;
+  margin-bottom: 28px;
+  text-shadow: 0 4px 4px rgba(0,0,0,.25);
+}
+
+.pfp-marketing-page .logo {
+  width: 100%;
+  margin-bottom: 6px;
+  max-width: 280px;
+}
+
+.pfp-marketing-page .hero-image img {
+  max-width: 274px;
+  width: 100%;
+}
+
+.pfp-marketing-page ul.features {
+  display: inline-grid;
+  column-gap: 26px;
+  grid-auto-flow: column;
+  grid-auto-rows: 119px;
+  grid-auto-columns: minmax(0, 1fr);
+}
+
+.pfp-marketing-page ul.features li {border-radius: 10px;font-size: 13px;display: flex;align-items: center;padding: 8px;letter-spacing: -1px;flex-direction: column;box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.03), 0px 1px 6px -1px rgba(0, 0, 0, 0.02), 0px 2px 4px 0px rgba(0, 0, 0, 0.02);background-color: #fff;justify-content: center;font-weight: 600;}
+
+.pfp-marketing-page ul.features li .feature-icon {margin-bottom: 6px;}
+
+.pfp-marketing-page ul.features li .feature-icon img {
+  max-width: 30px;
+  width: 100%;
+  height: 100%;
+  max-height: 30px;
+}
+
+.pfp-marketing-page .section-description p {
+  font-weight: 600;
+  font-style: italic;
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+.pfp-marketing-page ul.card-plugin-action {
+  display: grid;
+  column-gap: 20px;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  margin: 0;
+}
+
+.pfp-marketing-page ul.card-plugin-action .card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px 26px;
+  border: none;
+  box-shadow: 0px 6px 16px 0px rgba(0, 0, 0, 0.08), 0px 3px 6px -4px rgba(0, 0, 0, 0.12), 0px 9px 28px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.pfp-marketing-page ul.card-plugin-action .card .card-title {
+  padding: 0;
+  flex-flow: column;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.pfp-marketing-page ul.card-plugin-action .card .card-title:after {
+  content: "";
+  border-bottom: 1px solid #E0E0E0;
+  width: 100%;
+}
+
+.pfp-marketing-page ul.card-plugin-action .card .card-title h2 {margin-top: 12px;line-height: 1.5;margin-bottom: 6px;text-align: left;}
+
+.pfp-marketing-page ul.card-plugin-action .card .card-title .card-title--step {
+  margin-top: 2px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.pfp-marketing-page ul.card-plugin-action .card .card-body {
+  padding: 14px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.pfp-marketing-page ul.card-plugin-action .card .card-body ul {
+  list-style: initial;
+}
+
+.pfp-marketing-page ul.card-plugin-action .card .card-body ul > li::marker{
+  font-size: 9px;
+}
+
+.pfp-marketing-page ul.card-plugin-action .card .card-body ul > li {
+  margin-bottom: 1em;
+}
+
+.pfp-marketing-page ul.card-plugin-action .card .card-footer .button {
+  width: 100%;
+  text-align: center;
+  font-weight: 400;
+  border-radius: 5px;
+  padding: 10px 25px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pfp-marketing-page ul.card-plugin-action .card .card-footer {
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.pfp-marketing-page ul.card-plugin-action .card.disabled:before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  filter: grayscale(1);
+}
+
+.pfp-marketing-page ul.card-plugin-action .card.disabled {
+  filter: grayscale(1);
+}
+
+.pfp-marketing-page ul.card-plugin-action .card.disabled div{
+  opacity: 0.5;
+}
+
+.pfp-marketing-page .button.button-primary{
+  transition: all 0.2s linear 0s;
+}
+
+.pfp-marketing-page .button.button-primary:after{
+  font-family: 'dashicons';
+  font-size: 18px;
+  display: inline-block;
+  align-items: center;
+  justify-content: flex-start;
+  opacity: 0;
+  height: 100%;
+  width: 0;
+  transition: all 0.2s linear 0s;
+  flex: 0;
+}
+.pfp-marketing-page .button.button-primary.button-install:after{
+  content: "\f316";
+}
+.pfp-marketing-page .button.button-primary.button-activate:after{
+  content: "\f147";
+}
+
+.pfp-marketing-page .button.button-primary:hover{ 
+  text-indent: -20px;
+}
+
+.pfp-marketing-page .button.button-primary:hover::after{
+  opacity: 1;
+  text-indent: 0;
+  margin-left: 4px;
+}
+
+/* ACFW Start*/
+#pfp-acfw-marketing-page.pfp-marketing-page .text-color-primary {color: #1693A7;}
+
+#pfp-acfw-marketing-page.pfp-marketing-page .bg-color-primary {background-color: #1693A7;}
+
+#pfp-acfw-marketing-page.pfp-marketing-page .button.button-primary{
+  background-color: #1693A7;
+}
+
+#pfp-acfw-marketing-page.pfp-marketing-page .button.button-primary:hover{
+  background-color: #0f6c7b;
+}
+
+#pfp-acfw-marketing-page.pfp-marketing-page .col.section-hero:before {
+  background-image: url('../images/acfw-marketing-hero-bg.png');
+}
+/* ACFW End*/
+
+/* Responsive */
+@media screen and (max-width: 780px) {
+  .pfp-marketing-page ul.features {
+    grid-auto-flow: initial;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .pfp-marketing-page ul.features li {
+    grid-column: span 2;
+  }
+
+  .pfp-marketing-page ul.features li:last-child:nth-child(3n - 1) {
+    grid-column-end: -2;
+  }
+
+  .pfp-marketing-page ul.features li:nth-last-child(2):nth-child(3n + 1) {
+    grid-column-end: 4;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .pfp-marketing-page ul.card-plugin-action {
+    grid-auto-flow: row;
+    row-gap: 20px;
+  }
+}
