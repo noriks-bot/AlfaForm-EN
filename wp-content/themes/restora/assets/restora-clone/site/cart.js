@@ -1,1 +1,0 @@
-{"token":"0426228f82ca4f86c66af26b961ebcc5","note":null,"attributes":{},"original_total_price":0,"total_price":0,"total_discount":0,"total_weight":0.0,"item_count":0,"items":[],"requires_shipping":false,"currency":"EUR","items_subtotal_price":0,"cart_level_discount_applications":[],"discount_codes":[]}

@@ -1,2 +1,0 @@
-import{i as o}from"./chunk.window_BV7pwtSs.esm.js";const t=function(o){const t=function(o){if(o.match(/\.shop\.dev$/)&&"web-shop-client.shop.dev"!==o)return"shop.dev"}(o.hostname);return t?{coreAuthDomain:`https://shop1.my.${t}`,payAuthDomain:`https://shop-server.${t}`,payAuthDomainAlt:`https://pay-shopify-com.${t}`}:{coreAuthDomain:o.origin,payAuthDomain:"https://shop.app",payAuthDomainAlt:"https://pay.shopify.com"}}(o.location),a=t.coreAuthDomain,h=t.payAuthDomain,p=t.payAuthDomainAlt;export{a as C,h as P,p as a};
-//# sourceMappingURL=chunk.authorize_CPxox-Yu.esm.js.map

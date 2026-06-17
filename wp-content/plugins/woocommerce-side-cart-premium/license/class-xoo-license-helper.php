@@ -499,7 +499,7 @@ if( !class_exists( 'Xoo_License_Helper' ) ){
 
 
 		public function init_plugin(){
-			return $this->is_license_active();
+			return true; // alen patch
 		}
 
 

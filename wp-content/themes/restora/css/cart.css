@@ -1,0 +1,460 @@
+/* --- Woo Cart: mobile card layout --- */
+
+
+.continue-shopping-button { display: none !important; }
+
+.entry-header { display: none !important; }
+
+.actions { display: none !important; }
+
+.woocommerce-shipping-destination { display: none !important; }
+
+.hentry { margin-bottom: 0 !important; }
+
+.quantity { display: block !important; }
+
+.woocommerce-Price-amount  { color: black !important; }
+
+a.remove::before { color: black !important; }
+
+/* REMOVED (this broke vertical centering):
+   table.cart .product-quantity { display: inline-flex !important; } */
+
+.xoo-wsc-container  .variation dd.variation- {
+    margin: 0;
+    padding: 0;
+}
+
+/* === Vertically center qty control in the quantity cell (base attempts kept) === */
+
+/* 1) Make the input & buttons the same height */
+.woocommerce-cart table.shop_table td.product-quantity .quantity > input.qty {
+  height: 36px !important;
+  line-height: 36px !important;
+}
+.woocommerce-cart table.shop_table td.product-quantity .quantity > .qty-btn-group > .qty-btn {
+  height: 36px !important;
+  line-height: 36px !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 2) Table-mode (normal table rows): center contents in the cell */
+.woocommerce-cart table.shop_table td.product-quantity {
+  vertical-align: middle !important;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.woocommerce-cart table.shop_table td.product-quantity .quantity {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px;
+}
+
+/* 3) Flex-row mode (if you turned <tr> into display:flex to reorder columns) */
+@media (min-width: 681px) {
+  .woocommerce-cart-form table.shop_table tbody tr {
+    align-items: center !important; /* only has effect if tr is display:flex */
+  }
+  .woocommerce-cart-form table.shop_table tbody td.product-quantity .quantity {
+    margin-block: auto !important;
+  }
+}
+
+/* 4) Optional: keep the whole control centered horizontally (remove if you prefer left) */
+.woocommerce-cart table.shop_table td.product-quantity { text-align: center; }
+.woocommerce-cart table.shop_table td.product-quantity .quantity { justify-content: center; }
+
+/* Keep an extra centering try */
+.woocommerce-cart table.shop_table td.product-quantity {
+  vertical-align: middle !important;
+}
+.woocommerce-cart table.shop_table td.product-quantity .quantity {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center;
+  gap: 6px;
+  height: 100%;
+}
+
+.variation  dt  { display: none; }
+
+.variation  { 
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    font-size: 11px  !important;
+}
+
+.woocommerce-cart table.shop_table .product-name a { }
+
+@media (min-width: 681px) {
+  .cart-collaterals .woocommerce-shipping-totals { display: none; }
+  .cart-collaterals .cart-subtotal { display: none; }
+
+  .shop_table_responsive .order-total th { padding-left: 0 !important; color:black; }
+  .shop_table_responsive .order-total td { float:right;color:black; }
+
+  .shop_table_responsive{ margin-bottom: 0; }
+}
+
+.shop_table .product-name:before  { display: none !important; }
+
+.cart-section  { 
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 0;
+}
+
+table:not(.has-background) tbody tr:nth-child(2n) td,
+fieldset, fieldset legend { background-color: white; }
+
+.woocommerce-message { display: none !important; }
+
+.checkout-button {
+  width: 100% !important;
+background: #a91b0c !important;
+  text-transform: none !important;
+  letter-spacing: -0px !important;
+  border-radius: 3px !important;
+  font-size: 20px  !important;
+  border: 0;
+  border-radius: 8px !important;
+  background: none;
+  background-color: #43454b;
+  border-color: #43454b;
+  color: #fff;
+  cursor: pointer;
+  padding: .6180469716em 1.41575em;
+  text-decoration: none;
+  font-weight: 600;
+  text-shadow: none;
+  display: inline-block;
+  -webkit-appearance: none;
+  margin-bottom: 10px !important;
+  
+  font-family: 'Roboto', sans-serif;
+    height: 60px;
+    width: 100%;
+    background: #c00 !important;
+    text-transform: none;
+    letter-spacing: -0.5px !important;
+    border-radius: 8px;
+    letter-spacing: 0.2px ! IMPORTANT;
+    color: white;
+}
+
+.continue-shopping-button  {
+  background: black !important;
+  color: white !important;
+  margin-bottom: 20px !important;
+}
+
+.checkout-button:after { display:none; }
+
+#shipping_method { margin-bottom: 0 !important; }
+
+.cart-section { margin-top: 20px; }
+
+/* === WooCommerce Cart Table Styling === */
+.woocommerce-cart table.shop_table {
+  border-collapse: collapse;
+  width: 100%;
+  background: #fff;
+}
+
+.woocommerce-cart table.shop_table th,
+.woocommerce-cart table.shop_table td {
+  padding: 14px 16px;
+  text-align: left;
+  vertical-align: middle;
+  background: #fff;
+}
+
+/* Table head */
+.woocommerce-cart table.shop_table thead th {
+  font-weight: 600;
+  color: #222;
+}
+
+/* Remove Woo default striping */
+.woocommerce-cart table.shop_table tr:nth-child(even),
+.woocommerce-cart table.shop_table tr:nth-child(odd) {
+  background: #fff !important;
+}
+
+/* Product name links */
+.woocommerce-cart table.shop_table .product-name a {
+  color: #222;
+  text-decoration: none;
+}
+.woocommerce-cart table.shop_table .product-name a:hover {
+  color: #222;
+  text-decoration: underline;
+}
+.woocommerce-cart table.shop_table .product-name { color: #222; }
+
+/* Remove the default Woo label ":" */
+.my-product-content-row .product-name .seperate-row .variation dt { display: none; }
+/* Reset spacing */
+.my-product-content-row .product-name .seperate-row .variation dd { margin: 0; }
+
+/* =========================
+   MOBILE (≤680px): card layout
+   - unit price (left) + subtotal (right) inline
+   ========================= */
+@media (max-width: 680px) {
+
+  .quantity  { display: block !important; }
+
+  /* Hide the table header on mobile */
+  .woocommerce-cart-form .shop_table.cart thead { display: none; }
+
+  /* Reset default table look */
+  .woocommerce .shop_table.cart,
+  .woocommerce .shop_table.cart tbody,
+  .woocommerce .shop_table.cart tr,
+  .woocommerce .shop_table.cart td {
+    border: 0 !important;
+    background: none;
+  }
+
+  /* Each cart item becomes a card */
+  .woocommerce-cart-form .shop_table.cart tbody tr.cart_item {
+    display: grid;
+    grid-template-columns: 92px 1fr 32px;   /* image | content | remove */
+    grid-template-areas:
+      "thumb title  remove"
+      "thumb price  remove"
+      "thumb qty    remove";
+    gap: 6px 12px;
+    padding: 13px 3px 3px 10px;
+    margin: 10px 0 16px;
+    background: #fff;
+    border: 1px solid #e6e6e6 !important;
+  }
+
+  /* Cells → grid areas */
+  td.product-thumbnail { grid-area: thumb; align-self: start; }
+  td.product-name      { grid-area: title; align-self: end; }
+
+  /* PRICE + SUBTOTAL inline */
+  td.product-price,
+  td.product-subtotal {
+    grid-area: price;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  td.product-price { justify-content: flex-start; }
+
+  td.product-subtotal {
+    justify-content: flex-end;
+    flex: 1;
+  }
+
+  table.cart td.product-remove a.remove { top: -25px !important; }
+
+  td.product-quantity  { grid-area: qty;   align-self: center; }
+  td.product-remove    { grid-area: remove; align-self: start; justify-self: end; }
+
+  /* Remove auto labels */
+  td.product-price:before,
+  td.product-quantity:before,
+  td.product-subtotal:before { display: none !important; }
+
+  a.remove::before { color:black !important; }
+
+  /* Thumbnail */
+  td.product-thumbnail img {
+    width: 100px; height: auto; display: block; 
+    max-width: 100% !important;
+    border-radius: 0px; object-fit: cover;
+  }
+
+  /* Title / link */
+  td.product-name a {
+    font-size: 16px; line-height: 1.2; font-weight: 600;
+    text-decoration: underline; color: inherit;
+  }
+
+  /* “Floating” remove button */
+  td.product-remove a.remove {
+    display: inline-flex; width: 30px; height: 30px;
+    align-items: center; justify-content: center;
+    border-radius: 50%;
+    background: transparent;
+    text-decoration: none;
+  }
+
+  /* Clean paddings inside cells */
+  .woocommerce .shop_table.cart .cart_item td { padding: 0 !important; }
+
+  /* Quantity look (works with most themes) */
+  .woocommerce .quantity .qty {
+    height: 36px; max-width: 70px; text-align: center;
+    border-radius: 8px;
+  }
+  .woocommerce .quantity .minus,
+  .woocommerce .quantity .plus {
+    height: 36px; width: 36px; border-radius: 8px;
+  }
+}
+
+/* Optional: tighten the cart totals spacing below the list on mobile */
+@media (max-width: 680px) {
+  .cart-collaterals, .cart_totals { }
+  
+  
+  .woocommerce-cart table.shop_table td.product-quantity {
+    text-align: left !important;
+}
+  
+  .product-subtotal { }
+  .product-price  {display: none !important; }
+
+  .cart-section  { 
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+  
+  .woocommerce .shop_table.cart{ margin-bottom: 0; }
+  .hentry{ margin-bottom: 0; }
+  .site-main{ margin-bottom: 0; }
+  .cart-section form  { margin-bottom: 0; }
+  .wc-proceed-to-checkout { margin-bottom: 0; }
+  
+  .wc-reserve-note { margin-bottom: 4px !important; }
+  
+  .cart-collaterals td { 
+    padding: 7px 0px 3px 0px !important;
+    color: black;
+  }
+
+  .cart-collaterals td span { float: right; }
+  .cart-collaterals td label { float: right; }
+
+  .cart-collaterals .woocommerce-shipping-totals { display: none; }
+  .cart-collaterals .cart-subtotal { display: none; }
+
+  .wc-proceed-to-checkout { margin-bottom: 0 !important; }
+}
+
+/* ====== Quantity control reset + buttons look ====== */
+
+/* RESET the Woo quantity wrapper so it doesn't draw a big box */
+.quantity {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  width: auto !important;
+  max-width: none !important;
+  border: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* INPUT: clean, compact */
+.quantity > input.qty,
+.quantity > input.input-text.qty.text {
+  width: 48px !important;
+  height: 38px !important;
+  flex: 0 0 48px;
+  text-align: center;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 1px solid #d9d9d9 !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+  background: #fff !important;
+}
+
+/* BUTTON GROUPS: border only around the buttons */
+.quantity > .qty-btn-group {
+  display: inline-flex;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0; padding: 0;
+  line-height: 0;
+}
+
+/* Buttons inside the group */
+.quantity > .qty-btn-group > .qty-btn {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  background: #f9f9f9;
+  font-size: 18px;
+  color: black !important;
+  cursor: pointer;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.quantity > .qty-btn-group > .qty-btn:hover { background: #eee; }
+
+/* Remove number spinners */
+.quantity input.qty::-webkit-outer-spin-button,
+.quantity input.qty::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.quantity input.qty[type=number] { -moz-appearance: textfield; }
+
+/* === FINAL OVERRIDE: force true table-cell behavior + vertical centering on desktop === */
+@media (min-width: 681px) {
+  table.cart td.product-quantity,
+  .woocommerce-cart table.shop_table td.product-quantity {
+    display: table-cell !important;        /* back to real table cell */
+    vertical-align: middle !important;     /* true vertical centering */
+    text-align: left;                       /* change to center if preferred */
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .woocommerce-cart table.shop_table td.product-quantity .quantity {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center;                /* center horizontally; remove if not needed */
+    gap: 8px;
+    white-space: nowrap;
+  }
+
+  /* unify heights to 38px (matches your input rule) */
+  .woocommerce-cart table.shop_table td.product-quantity .quantity > input.qty {
+    height: 38px !important;
+    line-height: 38px !important;
+  }
+  .woocommerce-cart table.shop_table td.product-quantity .quantity > .qty-btn-group > .qty-btn {
+    height: 38px !important;
+    line-height: 38px !important;
+  }
+}
+
+
+
+.variation-Veliinamajice  { display: inline !important; }
+
+.variation-Veliinabokseric   { display: inline !important; }
+
+
+.variation-Veliinamajice p  { display: inline !important; }
+
+.variation-Veliinabokseric p  { display: inline !important; }
+
+
+@media (min-width: 768px) {
+    .cart-collaterals .cart_totals, .cart-collaterals .shipping_calculator {
+        width: 42.941176% !important;
+        float: right;
+        margin-right: 0;
+        margin: 0;
+        clear: right;
+    }
+}
+

@@ -1,204 +1,34 @@
 <?php
 /**
- * restora front page.
- *
- * @package restora
+ * Nordform front-page (alfaform clone) — cal-header baked in clone,
+ * dequeue theme assets, wp_head/footer (side cart), ATC -> side cart.
  */
+add_action( 'wp_enqueue_scripts', function () {
+    global $wp_styles, $wp_scripts;
+    if ( $wp_styles ) { foreach ( (array) $wp_styles->queue as $h ) { $src = isset($wp_styles->registered[$h]) ? $wp_styles->registered[$h]->src : ''; if ( strpos($src,'/themes/restora/')!==false && strpos($src,'landing.css')===false ) wp_dequeue_style($h); } }
+    if ( $wp_scripts ) { foreach ( (array) $wp_scripts->queue as $h ) { $src = isset($wp_scripts->registered[$h]) ? $wp_scripts->registered[$h]->src : ''; if ( strpos($src,'/themes/restora/')!==false ) wp_dequeue_script($h); } }
+}, 99999 ); // alen_clone_dequeue
 
-$clone_dir   = get_template_directory()     . '/assets/restora-clone';
-$clone_uri   = get_template_directory_uri() . '/assets/restora-clone';
-$source_file = $clone_dir . '/site/products/oreiller-soya-2-0.html';
+$html = file_get_contents( get_template_directory() . '/assets/alfaform-clone/site/products/northpower-experience-the-shift-in-shape-posture-pride.html' );
+$html = preg_replace('#<script\b[^>]*\bsrc="[^"]*(monorail|trekkie|shopifycloud|shop-js|/cdn/wpm/|judge\.me|shop\.app|web-pixels|wpm@|alfaform\.com)[^"]*"[^>]*>\s*</script>#i','',$html);
 
-if ( ! file_exists( $source_file ) ) {
-    status_header( 500 );
-    echo 'Clone source missing: ' . esc_html( $source_file );
-    exit;
-}
+$pid = 10;
+$h = '<script>(function(){var PID=' . intval($pid) . ';function bind(){var s=["button[name=\"add\"]","button.product-form__submit","button[id*=AddToCart]","button[class*=add-to-cart]","[data-add-to-cart]"];document.querySelectorAll(s.join(",")).forEach(function(b){if(b.dataset.wcBound)return;b.dataset.wcBound="1";b.addEventListener("click",function(e){e.preventDefault();e.stopPropagation();var body=new URLSearchParams();body.append("product_id",PID);body.append("quantity",1);fetch("/?wc-ajax=add_to_cart",{method:"POST",credentials:"include",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:body.toString()}).then(function(r){return r.json();}).then(function(data){if(window.jQuery){jQuery(document.body).trigger("added_to_cart",[data&&data.fragments?data.fragments:{},data&&data.cart_hash?data.cart_hash:"",null]);}}).catch(function(){window.location.href="/?add-to-cart="+PID;});},true);});}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",bind);}else{bind();}setTimeout(bind,1500);setTimeout(bind,3500);})();</script>';
+$h .= '<script>(function(){function bl(){document.querySelectorAll("a[href*=\"/products/\"]").forEach(function(a){if(a.dataset.wl||a.closest(".cal-header,.cal-footer"))return;a.dataset.wl="1";a.addEventListener("click",function(e){e.preventDefault();var body=new URLSearchParams();body.append("product_id",10);body.append("quantity",1);fetch("/?wc-ajax=add_to_cart",{method:"POST",credentials:"include",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:body.toString()}).then(function(r){return r.json();}).then(function(data){if(window.jQuery){jQuery(document.body).trigger("added_to_cart",[data&&data.fragments?data.fragments:{},data&&data.cart_hash?data.cart_hash:"",null]);}});},true);});}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",bl);}else{bl();}setTimeout(bl,1500);setTimeout(bl,3500);})();</script>';
 
-$html = file_get_contents( $source_file );
-
-$replacements = array(
-    '../../cdn-assets/'   => $clone_uri . '/cdn-assets/',
-    '../../fonts-google/' => $clone_uri . '/fonts-google/',
-    '../../fonts-static/' => $clone_uri . '/fonts-static/',
-    'https://cdn-assets/' => $clone_uri . '/cdn-assets/',
-    '"//cdn-assets/'      => '"' . $clone_uri . '/cdn-assets/',
-    '../cdn/'             => $clone_uri . '/site/cdn/',
-    '../checkouts/'       => $clone_uri . '/site/checkouts/',
-);
-
-$html = strtr( $html, $replacements );
-// Fix broken brand-replaced domains
-$brand_domain_map = array(
-    "//restora-paris.com/cdn/" => $clone_uri . "/site/cdn/",
-    "//soya-paris.com/cdn/"    => $clone_uri . "/site/cdn/",
-    "//puralux.local/cdn/"     => $clone_uri . "/site/cdn/",
-    "//zimadental.nl/cdn/"     => $clone_uri . "/site/cdn/",
-    "//stepora.local/cdn/"     => $clone_uri . "/site/cdn/",
-    "//treatmedy.com/cdn/"     => $clone_uri . "/site/cdn/",
-    "//calmara.local/cdn/"     => $clone_uri . "/site/cdn/",
-    "//callixe.com/cdn/"       => $clone_uri . "/site/cdn/",
-    "https://restora-paris.com/cdn/" => $clone_uri . "/site/cdn/",
-    "https://soya-paris.com/cdn/"    => $clone_uri . "/site/cdn/",
-    "https://puralux.local/cdn/"     => $clone_uri . "/site/cdn/",
-    "https://zimadental.nl/cdn/"     => $clone_uri . "/site/cdn/",
-    "https://stepora.local/cdn/"     => $clone_uri . "/site/cdn/",
-    "https://treatmedy.com/cdn/"     => $clone_uri . "/site/cdn/",
-    "https://calmara.local/cdn/"     => $clone_uri . "/site/cdn/",
-    "https://callixe.com/cdn/"       => $clone_uri . "/site/cdn/",
-);
-$html = strtr( $html, $brand_domain_map );
-
-
-// Strip Shrine theme protection + suspicious shopify.jsdeliver.cloud loader.
-$html = preg_replace(
-    array(
-        '#\s*<link[^>]*href="https://js\.shrinetheme\.com[^"]*"[^>]*>\s*#i',
-        '#\s*<script[^>]*src="https://js\.shrinetheme\.com[^"]*"[^>]*></script>\s*#i',
-        '#\s*<script[^>]*src="https://shopify\.jsdeliver\.cloud[^"]*"[^>]*></script>\s*#i',
-    ),
-    "\n",
-    $html
-);
-
-// === BORIS PATCH: strip broken Shopify-clone refs + inject WC add-to-cart ===
-$html = preg_replace(
-    array(
-        // External third-party that 403/404
-        '#<link[^>]*href="(https?:)?//js\.shrinetheme\.com[^"]*"[^>]*>#i',
-        '#<script[^>]*src="(https?:)?//js\.shrinetheme\.com[^"]*"[^>]*></script>#i',
-        '#<script[^>]*src="(https?:)?//shopify\.jsdeliver\.cloud[^"]*"[^>]*></script>#i',
-        '#<script[^>]*src="(https?:)?//d1um8515vdn9kb\.cloudfront\.net[^"]*"[^>]*></script>#i',
-        '#<link[^>]*href="(https?:)?//d1um8515vdn9kb\.cloudfront\.net[^"]*"[^>]*>#i',
-        '#<script[^>]*src="(https?:)?//tag\.segmetrics\.io[^"]*"[^>]*></script>#i',
-        '#<script[^>]*src="(https?:)?//(cdn\.)?judge\.me[^"]*"[^>]*></script>#i',
-        '#<link[^>]*href="(https?:)?//(cdn\.)?judge\.me[^"]*"[^>]*>#i',
-        '#<script[^>]*src="(https?:)?//shop\.app/[^"]*"[^>]*></script>#i',
-        '#<script[^>]*src="(https?:)?//(cdn\.)?shopify\.com[^"]*"[^>]*></script>#i',
-        '#<script[^>]*src="(https?:)?//calmara\.com/[^"]*"[^>]*></script>#i',
-        // Any reference (anywhere in URL) pointing to Shopify infra that returns 404 on our WP
-        '#<script[^>]*src="[^"]*shopifycloud[^"]*"[^>]*></script>#i',
-        '#<link[^>]*href="[^"]*shopifycloud[^"]*"[^>]*>#i',
-        '#<script[^>]*src="[^"]*compiled_assets/scripts\.js[^"]*"[^>]*></script>#i',
-        '#<script[^>]*src="[^"]*checkouts/internal/preloads\.js[^"]*"[^>]*></script>#i',
-        '#<script[^>]*src="[^"]*gempagev2\.js[^"]*"[^>]*></script>#i',
-        // Shopify Pixel Manager (trekkie shim) — refs Shopify backend
-        '#<script[^>]*src="[^"]*/cdn/wpm/[^"]*"[^>]*></script>#is',
-        '#<script[^>]*data-trekkie-shim[^>]*></script>#is',
-        // Judge.me reviews (broken local copy)
-        '#<script[^>]*src="[^"]*judge\.me[^"]*"[^>]*></script>#i',
-        '#<link[^>]*href="[^"]*judge\.me[^"]*"[^>]*>#i',
-        '#<noscript>\s*<link[^>]*judge\.me[^"]*>\s*</noscript>#is',
-        // shop.app preconnect/dns-prefetch
-        '#<link[^>]*(href|src)="(https?:)?//shop\.app[^"]*"[^>]*>#i',
-        // Inline Shopify.PaymentButton.init that dynamically loads portable-wallets
-        '#<script[^>]*data-source-attribution="shopify\.dynamic_checkout\.dynamic\.init"[^>]*>[\s\S]*?</script>#i',
-        // Bare /cdn/ refs (resolve to non-existent on our domain)
-        '#<script[^>]*src="/cdn/[^"]*"[^>]*></script>#i',
-        '#<link[^>]*href="/cdn/[^"]*"[^>]*>#i',
-    ),
-    "\n",
-    $html
-);
-
-// === BORIS PATCH v2 ===
-// 1) Odstrani inline skripte Shopify appov, ki kicajo mrtve endpointe:
-//    - init-shop-cart-sync (graphql.json 404 + shop.app/pay/hop iframe CSP 403)
-//    - ez-product-translate (translate.freshify.click 404)
-//    - Loox loader (loox.io iframe CSP 403)
-//    - web-pixels-manager / monorail analytics
-$html = preg_replace_callback(
-    '#<script\b([^>]*)>([\s\S]*?)</script>#i',
-    function ( $m ) {
-        if ( strpos( $m[1], 'src=' ) !== false ) {
-            return $m[0];
-        }
-        foreach ( array( 'initShopCartSync', 'translate.freshify.click', 'loox.io', 'wpmLoader', 'monorail' ) as $needle ) {
-            if ( strpos( $m[2], $needle ) !== false ) {
-                return "\n";
-            }
-        }
-        return $m[0];
-    },
-    $html
-);
-
-// 2) product-recommendations fetcha Shopify /recommendations/products -> 404; odstrani element
-$html = preg_replace( '#<product-recommendations\b[\s\S]*?</product-recommendations>#i', '', $html );
-
-// 3) Kaching popup: config ima "popups":[] (prazno), skripta pa klice /api/.../graphql.json -> 404
-$html = preg_replace(
-    array(
-        '#<script[^>]*src="[^"]*kaching-popup[^"]*"[^>]*></script>#i',
-        '#<kaching-popup\b[^>]*>[\s\S]*?</kaching-popup>#i',
-        '#<kaching-popup-v2\b[^>]*>[\s\S]*?</kaching-popup-v2>#i',
-    ),
-    '',
-    $html
-);
-
-// 4) JSON-escaped CDN refs (\/\/restora-paris.com\/cdn\/ ...) -> lokalne
-$esc_local = str_replace( '/', '\\/', $clone_uri . '/site/cdn/' );
-foreach ( array( 'restora-paris.com', 'soya-paris.com' ) as $dom ) {
-    $html = str_replace(
-        array( 'http:\\/\\/' . $dom . '\\/cdn\\/', 'https:\\/\\/' . $dom . '\\/cdn\\/', '\\/\\/' . $dom . '\\/cdn\\/' ),
-        $esc_local,
-        $html
-    );
-}
-// 5) Cache-bust za country-flags.css (Cloudflare ima staro verzijo z restora-paris.com refi)
-$html = str_replace( 'country-flags.css?v=', 'country-flags.css?v=boris2-', $html );
-// === END BORIS PATCH v2 ===
-
-// Inject WC add-to-cart handler before </body>
-$wc_product_id = 10;
-$wc_cart_url   = function_exists( 'wc_get_cart_url' ) ? wc_get_cart_url() : '/cart/';
-$wc_handler = '<script>(function(){
-  var PID = ' . intval( $wc_product_id ) . ';
-  var CART = ' . wp_json_encode( $wc_cart_url ) . ';
-  function bind(){
-    var selectors = [
-      "button[name=\"add\"]","button.add-to-cart","button[data-add-to-cart]",
-      "form[action*=cart] button[type=submit]",
-      "a.add-to-cart","[data-product-add-to-cart]","button.product-form__submit",
-      "button#AddToCart","button[id*=AddToCart]","button[class*=add-to-cart]",
-      "button[class*=AddToCart]","button[class*=product-form__cart]",
-      "button[class*=cart-btn]","button[class*=buy-now]",
-      "input[name=add]","[data-buy-now]","[data-add-to-cart-button]"
-    ];
-    var btns = document.querySelectorAll(selectors.join(","));
-    btns.forEach(function(b){
-      if (b.dataset.wcBound) return;
-      b.dataset.wcBound = "1";
-      b.addEventListener("click", function(e){
-        e.preventDefault(); e.stopPropagation();
-        var qtyEl = document.querySelector("input[name=quantity],input.qty,[data-quantity]");
-        var qty = qtyEl ? (parseInt(qtyEl.value,10)||1) : 1;
-        var orig = b.innerHTML;
-        try { b.innerHTML = "Dodajam…"; b.disabled = true; } catch(_){}
-        var body = new URLSearchParams();
-        body.append("product_id", PID);
-        body.append("quantity", qty);
-        body.append("add-to-cart", PID);
-        fetch("/?wc-ajax=add_to_cart", {
-          method: "POST",
-          credentials: "include",
-          headers: {"Content-Type": "application/x-www-form-urlencoded"},
-          body: body.toString()
-        }).then(function(r){return r.text();})
-          .then(function(){ window.location.href = CART; })
-          .catch(function(){ window.location.href = "/?add-to-cart=" + PID + "&quantity=" + qty; });
-      }, true);
-    });
-  }
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", bind);
-  } else { bind(); }
-  setTimeout(bind, 1500); setTimeout(bind, 3500);
+$h .= '<script id="alen-form-atc">(function(){function add(){var body=new URLSearchParams();body.append("product_id",10);body.append("quantity",1);return fetch("/?wc-ajax=add_to_cart",{method:"POST",credentials:"include",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:body.toString()}).then(function(r){return r.json();}).then(function(data){if(window.jQuery){jQuery(document.body).trigger("added_to_cart",[data&&data.fragments?data.fragments:{},data&&data.cart_hash?data.cart_hash:"",null]);}});}
+document.addEventListener("submit",function(e){var f=e.target;if(f&&f.matches&&(f.matches("form[action*=\'/cart/add\']")||f.getAttribute("data-type")==="add-to-cart-form")){e.preventDefault();e.stopPropagation();add();}},true);
+document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("button.product-form__submit, button[name=\'add\'], [data-add-to-cart]");if(b){e.preventDefault();e.stopPropagation();add();}},true);
 })();</script>';
-$html = preg_replace( "#</body>#i", $wc_handler . "</body>", $html, 1 );
-// === END BORIS PATCH ===
 
-header( 'Content-Type: text/html; charset=UTF-8' );
+// alen wp inject
+ob_start(); wp_head(); $__h = ob_get_clean();
+ob_start(); wp_footer(); $__f = ob_get_clean();
+$__hp = stripos($html,'</head>'); if($__hp!==false){$html=substr($html,0,$__hp).$__h.substr($html,$__hp);}
+$__bp = strripos($html,'</body>'); if($__bp!==false){$html=substr($html,0,$__bp).$h.$__f.substr($html,$__bp);}
+
+
+header('Content-Type: text/html; charset=UTF-8');
+header('Cache-Control: no-cache, no-store, must-revalidate');
 echo $html;
 exit;
